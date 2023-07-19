@@ -12,10 +12,14 @@ foreach ($_POST as $key => $value) {
 }
 $message .= '</body></html>';
 
-// $email_to = 'betails@yandex.by';
-$email_to = 'admin@mirinda.by, betails@yandex.by';
+$email_to = 'admin@mirinda.by';
 $email_from = 'info@mirinda.info';
-$email_subject = "mirinda.by — заявка";
+
+$email_subject = "заявка |";
+if ($_POST['form']) {
+    $email_subject .= " {$_POST['form']} | ";
+}
+$email_subject .= "mirinda.by";
 
 $from_name = "info";
 $headers = array(
