@@ -30,7 +30,10 @@ function isSectionVisible(section) {
 }
 
 buttonRegister.addEventListener('click', () => {
-	document.querySelector('#register .section__bayan').openBayan();
+	const sectionBayan = document.querySelector('#register .section__bayan');
+	if (sectionBayan) {
+		sectionBayan.openBayan();
+	}
 })
 
 window.addEventListener('scroll', () => {

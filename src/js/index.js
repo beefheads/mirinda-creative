@@ -10,16 +10,17 @@ import "./components.b/controls/formich.js";
 import "./components.b/spawners/b_modal.js";
 import "./components.b/controls/_button-sticky.js";
 
+import "./components.miri/_input-calendar.js";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	const sectionBayans = document.querySelectorAll('.section__bayan');
 	sectionBayans.forEach(bayan => {
 		const section = bayan.closest('.section');
-		// if (window.innerWidth > 1100) {
+		if (window.innerWidth > 1100) {
 			section.classList.add('section--closed');
-		// } else {
-			// bayan.classList.add('bayan--opened')
-		// }
+		} else {
+			bayan.classList.add('bayan--opened')
+		}
 		bayan.addEventListener('bayan-open', () => {
 			section.classList.remove('section--closed');
 		})

@@ -13,14 +13,14 @@ foreach ($_POST as $key => $value) {
 $message .= '</body></html>';
 
 // $email_to = 'boffeechane@gmail.com';
-$email_to = 'admin@maddog.by';
-$email_from = 'info@maddog.by';
+$email_to = 'admin@mirinda.by';
+$email_from = 'info@mirinda.by';
 $email_subject = "maddog.by — заявка";
 
 $from_name = "info";
 $headers = array(
     'From: ' . $from_name . ' <' . $email_from . '>',
-    'Reply-To: ' . 'noreply@maddog.by',
+    'Reply-To: ' . 'noreply@mirinda.by',
     'Content-Type: text/html; charset=UTF-8',
 );
 $headers = implode("\r\n", $headers);

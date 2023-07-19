@@ -1,0 +1,29 @@
+.input-calendar {
+	z-index: 3;
+}
+
+.input-calendar .datepicker-dropdown {
+	min-width: 25rem;
+}
+
+.input-calendar .datepicker-picker{
+	border-radius: 0;
+}
+
+.input-calendar .datepicker-view {
+	width: 100%;
+}
+
+.input-calendar .datepicker span {
+	margin-bottom: 0.4rem;
+	line-height: 1;
+	padding-top: 0.9rem;
+	padding-bottom: 0.6rem;
+	height: initial;
+	font-size: 1.6rem;
+}
+
+.input-calendar .datepicker-cell.selected,
+.input-calendar .datepicker-cell.selected:hover {
+	background-color: #FFC600;
+}
