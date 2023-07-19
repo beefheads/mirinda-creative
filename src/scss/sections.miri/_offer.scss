@@ -19,6 +19,10 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	
+	@media (max-width: $mobile-l) {
+		right: 1.5rem;
+	}
 }
 
 .offer__subtitle {
@@ -43,7 +47,16 @@
 	padding-top: 2.6rem;
 	padding-bottom: 1.5rem;
 	margin-bottom: 6rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 4.4rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 2.5rem;
+    letter-spacing: 0.6rem;
+	}
 }
+
 .offer__slogan-text {
 	position: relative;
 	z-index: 2;
@@ -72,6 +85,21 @@
   background-position: center;
   background-size: contain;
   transform: rotate(-235deg);
+
+	@media (max-width: $laptop) {
+		left: unset;
+    right: 10rem;
+    top: 35rem;
+    transform: rotate(-165deg);
+	}
+
+	@media (max-width: $mobile-xl) {
+		right: 5rem;
+    top: 25rem;
+	}
+	@media (max-width: $mobile-l) {
+		display: none;
+	}
 }
 
 .offer__step {
@@ -94,4 +122,57 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $mobile-l) {
+    left: -8.2rem;
+    top: -0.4rem;
+	}
+}
+
+.offer__decor-right-top {
+  position: absolute;
+  top: 18rem;
+  right: 8rem;
+  z-index: 2;
+  display: block;
+  width: 25.5rem;
+  height: 30.1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (max-width: $laptop) {
+    right: 1rem;
+    width: 15.5rem;
+    height: 20.1rem;
+  }
+  @media (max-width: $mobile-xl) {
+  	top: 26rem;
+  }
+  @media (max-width: $mobile-l) {
+  	top: 34rem;
+  	right: -1rem;
+    width: 12.5rem;
+    height: 12.1rem;
+  }
+}
+
+
+.offer__list {
+	color: #000;
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 111%;
+	letter-spacing: 0.52rem;
+	text-transform: uppercase;
+
+	@media (max-width: $laptop) {
+		padding-left: 10rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 2.2rem;
+		letter-spacing: 0.22rem;
+		padding-left: 2rem;
+	}
 }

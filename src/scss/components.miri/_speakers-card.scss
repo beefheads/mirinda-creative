@@ -1,13 +1,32 @@
 .speakers-card {
 	position: relative;
 	cursor: pointer;
+
+	@media (max-width: $mobile-xl) {
+		max-width: var(--card-width);
+	}
 }
 
 .speakers-card:nth-child(3n+4),
 .speakers-card:nth-child(3n+5),
 .speakers-card:nth-child(3n+6) {
-	left: 13rem;
+	@media (min-width: $laptop + 1) {
+		left: 13rem;
+	}
 }
+.speakers-card:nth-child(4n+3),
+.speakers-card:nth-child(4n+4) {
+	@media (max-width: $laptop) and (min-width: $mobile-xl + 1) {
+		left: 11rem;
+	}
+}
+.speakers-card:nth-child(even) {
+	@media (max-width: $mobile-xl) and (min-width: $mobile-l + 1) {
+		left: unset;
+		margin-left: auto;
+	}
+}
+
 
 .speakers-card__media {
 	--size: 29.9rem;
@@ -18,6 +37,10 @@
 	display: block;
 	position: relative;
 	margin-bottom: 2.2rem;
+
+	@media (max-width: $mobile-xl) {
+		--size: 28rem;
+	}
 }
 
 .speakers-card__media::before {

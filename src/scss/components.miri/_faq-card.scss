@@ -1,5 +1,8 @@
 .faq-card {
 	margin-bottom: 4.6rem;
+	@media (max-width: $mobile-l) {
+		margin-bottom: 2.4rem;
+	}
 }
 .faq-card:last-child {
 	margin-bottom: 0;
@@ -12,6 +15,11 @@
 	padding-right: 7.7rem;
 	position: relative;
 	background-color: #FB6A25;
+
+	@media (max-width: $mobile-l) {
+		padding-right: 2rem;
+		padding-left: 4rem;
+	}
 }
 
 .faq-card__question-title {
@@ -22,12 +30,25 @@
 	line-height: 111%; /* 39.96px */
 	letter-spacing: 0.738rem;
 	text-transform: uppercase;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 3.2rem;
+	}
+	@media (max-width: $mobile-l) {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+	}
 }
 
 .faq-card .bayan__toggler {
 	position: absolute;
   left: 2.9rem;
   top: 2.2rem;
+
+  @media (max-width: $mobile-l) {
+    left: 0.9rem;
+    top: 2.2rem;
+  }
 }
 
 
@@ -37,34 +58,68 @@
 	padding: 6.6rem;
 	padding-top: 1.3rem;
 	padding-bottom: 1.3rem;
-}
 
-.faq-card__answer {
-	display: flex;
+	display: grid;
 	justify-content: flex-start;
 	align-items: flex-start;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.4rem;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+	}
+	@media (max-width: $mobile-l) {
+		margin-left: unset;
+		padding: 2rem;
+	}
 }
 
 .faq-card__anser-media {
-	max-width: 47.6rem;
+	// max-width: 47.6rem;
 	width: 100%;
 	margin-right: 2.4rem;
 	margin-top: 2rem;
 	margin-bottom: 5.6rem;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+	@media (max-width: $mobile-l) {
+		margin-top: 0;
+	}
 }
 
 .faq-card__answer-text {
 	color: #000;
-	font-family: HelveticaNeueCyr;
-	font-size: 24px;
+	font-size: 2.4rem;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 111%; /* 26.64px */
-	letter-spacing: 2.28px;
+	line-height: 111%;
+	letter-spacing: 0.228rem;
 	text-transform: uppercase;
+
+	@media (max-width: $mobile-l) {
+		font-size: 1.8rem;
+	}
+}
+
+.faq-card__answer-text:only-child {
+	@media (min-width: $tablet + 1) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}
+
+.faq-card__answer-text br {
+	@media (max-width: $laptop) {
+		display: none;
+	}
 }
 
 .faq-card__anser-media + .faq-card__answer-text {
-	padding-top: 8rem;
+	@media (min-width: $tablet + 1) {
+		padding-top: 8rem;
+	}
 }

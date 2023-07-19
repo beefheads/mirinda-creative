@@ -4,6 +4,10 @@
 
 .faq__title {
 	margin-bottom: 5rem;
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 2.5rem;
+	}
 }
 
 .faq__list {

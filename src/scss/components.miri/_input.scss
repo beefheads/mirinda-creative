@@ -9,6 +9,10 @@
   font-weight: 550;
   background-color: initial;
   border: none;
+  @media (max-width: $mobile-l) {
+    --fz: 1.6rem;
+    --input-padding: 0.9rem 0.6rem;
+  }
 }
 .input__label {
   background-color: #FB6A25;
@@ -26,12 +30,21 @@
   padding-bottom: 0.1rem;
   width: 100%;
   display: block;
+
+  @media (max-width: $mobile-l) {
+    font-size: 1.8rem;
+    letter-spacing: 0.292rem;
+    margin-bottom: 0.8rem;
+  }
 }
 
 .input__field {
   letter-spacing: 0.492rem;
   text-transform: uppercase;
   text-align: center;
-  border: 0.1rem solid var(--border-color);
+  border: 0.2rem solid var(--border-color);
+  @media (max-width: $mobile-l) {
+    letter-spacing: 0.192rem;
+  }
 }
 

@@ -1,8 +1,13 @@
 .hero {
-	padding-top: 15rem;
+	padding-top: 3.8rem;
 	padding-bottom: 6rem;
 	z-index: 10;
 	position: relative;
+
+	@media (max-width: $laptop) {
+		overflow: hidden;
+		padding-top: 2.4rem;
+	}
 }
 
 .hero__board {
@@ -14,6 +19,18 @@
   margin-right: auto;
   margin-bottom: 2.2rem;
   background-color: #7b7b7b;
+	display: flex;
+	flex-direction: column;
+
+  @media (max-width: $laptop) {
+  	padding-top: 2.6rem;
+  	margin-bottom: 5rem;
+  }
+
+  @media (max-width: $mobile-l) {
+  	max-width: 100%;
+  	padding-top: 8.6rem;
+  }
 }
 
 .hero__board > *:not(.hero__bg) {
@@ -43,6 +60,20 @@
 	font-weight: 900;
 	line-height: 125%; /* 25px */
 	text-transform: uppercase;
+
+	@media (max-width: $laptop) {
+		left: 2rem;
+		top: unset;
+		bottom: 2rem;
+		--c-fg-stroke: #fff;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 1.5rem;
+	}
+	@media (max-width: $mobile-l) {
+		bottom: unset;
+		top: 3rem
+	}
 }
 
 .hero__pointer {
@@ -55,6 +86,11 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $mobile-l) {
+		right: -2rem;
+		top: -2rem;
+	}
 }
 
 .hero__media-logo {
@@ -64,7 +100,20 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 4.6rem;
+
+	@media (max-width: $laptop) {
+		max-width: 56.5rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		max-width: 45.5rem;
+		margin-bottom: 1.6rem;
+	}
+	@media (max-width: $mobile-l) {
+		max-width: 26.5rem;
+	}
 }
+
 .hero__media-logo::before {
   content: "";
   display: block;
@@ -78,6 +127,11 @@
   left: -25.2rem;
   top: 14.1rem;
   z-index: 2;
+
+  @media (max-width: $laptop) {
+  	left: -14.2rem;
+    top: 23.1rem;
+  }
 }
 
 .hero__media-logo::after {
@@ -114,6 +168,21 @@
 	padding: 3.2rem 0.5rem 2.1rem 1.6rem;
 	left: -14.4rem;
 	bottom: 3.3rem;
+
+	@media (max-width: $laptop) {
+		position: relative;
+		left: 0;
+		bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline-block;
+		padding-right: 2rem;
+	}
+	@media (max-width: $mobile-l) {
+		max-width: 90%;
+		padding-top: 2rem;
+		padding-bottom: 1.5rem;
+	}
 }
 
 .hero__aside::before {
@@ -128,6 +197,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  pointer-events: none;
+
+  @media (max-width: $mobile-l) {
+  	left: 0.5rem;
+    top: 0.7rem;
+    width: 96.2%;
+    height: 106%;
+  }
 }
 
 .hero__aside-decor-ui {
@@ -138,7 +215,17 @@
 	font-size: 5.7rem;
 	letter-spacing: 1.3rem;
 	line-height: 1;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 4.9rem;
+    letter-spacing: 0.6rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 4rem;
+		
+	}
 }
+
 .hero__aside-row {
 	font-size: 3.6rem;
 	line-height: 1;
@@ -146,6 +233,13 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	letter-spacing: 0.12rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 2.6rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 2rem;
+	}
 }
 
 // .hero__button {
@@ -166,6 +260,27 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
+
+  @media (max-width: $laptop) {
+    right: -9.7rem;
+    bottom: -6.9rem;
+    width: 41.5rem;
+    height: 55.7rem;
+  }
+
+  @media (max-width: $mobile-xl) {
+  	right: -5.7rem;
+    bottom: -6.9rem;
+    width: 25.5rem;
+    height: 45.7rem
+  }
+  @media (max-width: $mobile-l) {
+  	right: -5rem;
+    bottom: -17.9rem;
+    width: 17.5rem;
+    height: 28.7rem;
+    transform: rotate(-5deg);
+  }
 }
 
 .hero__char-buble {
@@ -181,6 +296,17 @@
   left: 2.9rem;
   bottom: -2rem;
   z-index: 2;
+
+  @media (max-width: $mobile-xl) {
+  	left: 2.9rem;
+    bottom: -2rem;
+  }
+  @media (max-width: $mobile-l) {
+    left: -7.1rem;
+    bottom: 8rem;
+    width: 12.5rem;
+    height: 13.9rem;
+  }
 }
 
 .hero__subtitle {
@@ -193,4 +319,9 @@
 	letter-spacing: 0.768rem;
 	text-transform: uppercase;
 	margin-bottom: 2rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 2.4rem;
+		letter-spacing: 0.368rem;
+	}
 }

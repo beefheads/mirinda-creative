@@ -1,10 +1,17 @@
 .programm {
 	position: relative;
 	padding-bottom: 11rem;
+
+	@media (max-width: $laptop) {
+		overflow: hidden;
+	}
 }
 
 .programm__title {
 	margin-bottom: 8.6rem;
+	@media (max-width: $mobile-l) {
+		margin-bottom: 4.6rem;
+	}
 }
 
 .programm__list {
@@ -17,8 +24,14 @@
 	display: grid;
 	align-items: center;
 	grid-template-columns: 38.4rem auto;
-	column-gap: 6.7rem;
+	gap: 6.7rem;
 	margin-bottom: 3.3rem;
+
+	@media (max-width: $mobile-xl) {
+		grid-template-columns: 100%;
+		gap: 1.5rem;
+		margin-bottom: 3.6rem;
+	}
 }
 
 .programm__line:last-child {
@@ -41,6 +54,9 @@
 	padding-right: 3rem;
 	text-align: center;
 	position: relative;
+	@media (max-width: $mobile-l) {
+		font-size: 2.6rem;
+	}
 }
 
 .programm__line-desc {
@@ -51,6 +67,16 @@
 	font-weight: 550;
 	line-height: 137.5%;
 	letter-spacing: 0.05rem;
+
+	@media (max-width: $mobile-l) {
+		font-size: 1.8rem;
+	}
+}
+
+.programm__line-desc .section-text--bold {
+	@media (max-width: $mobile-l) {
+		display: block;
+	}
 }
 
 .programm__decor-left {
@@ -63,6 +89,10 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $mobile-xl) {
+		display: none;
+	}
 }
 .programm__blob-left-top {
   position: absolute;
@@ -75,6 +105,17 @@
   background-position: center;
   background-size: contain;
   transform: scale(1, -1) rotate(-16deg);
+
+  @media (max-width: $mobile-xl) {
+  	top: 11rem;
+    left: 0rem;
+    width: 14.5rem;
+    height: 14.7rem;
+    transform: scale(1, -1) rotate(34deg);
+  }
+  @media (max-width: $mobile-l) {
+  	display: none;
+  }
 }
 
 .programm__blob-left-bottom {
@@ -88,6 +129,13 @@
   background-position: center;
   background-size: contain;
   transform: scale(-1);
+
+  @media (max-width: $mobile-xl) {
+    bottom: -5rem;
+    width: 14.4rem;
+    height: 17.8rem;
+    transform: scale(-1) rotate(45deg);
+  }
 }
 
 .programm__blob-right-bottom {
@@ -101,6 +149,21 @@
   background-position: center;
   background-size: contain;
   transform: scale(1, -1) rotate(-18deg);
+
+  @media (max-width: $laptop) {
+  	bottom: 36rem;
+    right: -4rem;
+    display: block;
+    width: 15.3rem;
+    height: 19.2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(-1, -1) rotate(-44deg);
+  }
+  @media (max-width: $mobile-l) {
+  	display: none;
+  }
 }
 
 .programm__decor-right-bottom {
@@ -113,7 +176,18 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $laptop) {
+    bottom: 0;
+    right: 0;
+    width: 11.7rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		height: 10rem;
+	}
 }
+
 .programm__decor-right-top {
 	position: absolute;
 	top: 8rem;
@@ -124,28 +198,15 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-}
 
-.offer__decor-right-top {
-  position: absolute;
-  top: 18rem;
-  right: 8rem;
-  z-index: 2;
-  display: block;
-  width: 25.5rem;
-  height: 30.1rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-
-.offer__list {
-	color: #000;
-	font-size: 2.4rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 111%;
-	letter-spacing: 0.52rem;
-	text-transform: uppercase;
+	@media (max-width: $laptop) {
+    top: -2rem;
+    width: 9.6rem;
+    height: 36.3rem;
+	}
+	@media (max-width: $mobile-l) {
+		top: -8rem;
+    width: 6.6rem;
+    height: 31.3rem;
+	}
 }

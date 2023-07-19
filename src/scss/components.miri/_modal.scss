@@ -14,6 +14,19 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	@media (max-width: $laptop) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+	@media (max-width: $mobile-xl) {
+		padding-top: 10rem;
+		padding-bottom: 7rem;
+	}
+	@media (max-width: $mobile-l) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 }
 
 .modal::before {
@@ -32,6 +45,10 @@
 .b_modal__aligner {
 	padding-left: 0;
 	padding-right: 0;
+
+	@media (max-width: $laptop) {
+		padding: 0;
+	}
 }
 
 .modal__tags {
@@ -44,11 +61,23 @@
 	font-weight: 900;
 	line-height: 125%; /* 25px */
 	text-transform: uppercase;
+
+	@media (max-width: $laptop) {
+		top: 1rem;
+		left: -4rem;
+	}
+  @media (max-width: $mobile-xl) {
+  	display: none;
+  }
 }
 
 .modal__container {
 	z-index: 2;
 	position: relative;
+	@media (max-width: $mobile-l) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 
@@ -63,6 +92,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media (max-width: $laptop) {
+  	left: 2rem;
+  	top: 23rem;
+  }
+  @media (max-width: $mobile-xl) {
+  	display: none;
+  }
 }
 .modal__decor-left-top::before {
 	content: "";
@@ -89,6 +126,16 @@
   background-size: contain;
   transform: rotate(-84deg);
   z-index: 2;
+
+  @media (max-width: $laptop) {
+  	bottom: -0.5rem;
+    left: 2rem;
+    width: 17.6rem;
+    height: 17.8rem;
+  }
+  @media (max-width: $mobile-xl) {
+  	display: none;
+  }
 }
 
 .modal__decor-right-top {
@@ -101,6 +148,16 @@
   background-position: center;
   background-size: contain;
   z-index: 2;
+  pointer-events: none;
+
+  @media (max-width: $laptop) {
+    top: 7rem;
+    right: -6rem;
+    width: 28.6rem;
+ 	}
+  @media (max-width: $mobile-xl) {
+  	display: none;
+  }
 }
 
 .modal__decor-right-bottom {
@@ -114,6 +171,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media (max-width: $laptop) {
+  	display: none;
+  }
 }
 
 .modal__decor-right-bottom::before {
@@ -152,6 +213,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.5rem;
+	}
+	@media (max-width: $mobile-l) {
+		height: 13.7rem;
+	}
 }
 
 .modal__title {
@@ -164,6 +232,18 @@
 	letter-spacing: 1.312rem;
 	text-transform: uppercase;
 	margin-bottom: 0.6rem;
+
+	@media (max-width: $laptop) {
+		font-size: 4.8rem;
+		margin-bottom: 1.6rem;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 4.2rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 3rem;
+    letter-spacing: 0.2rem;
+	}
 }
 
 .modal__desc {
@@ -176,6 +256,20 @@
 	letter-spacing: 0.492rem;
 	text-transform: uppercase;
 	margin-bottom: 4.8rem;
+
+	@media (max-width: $laptop) {
+		margin-bottom: 3.2rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 1.8rem;
+		letter-spacing: 0.092rem;
+	}
+}
+
+.modal__desc br {
+	@media (max-width: $laptop) {
+		display: none;
+	}
 }
 
 .modal__button {
@@ -189,4 +283,7 @@
 	line-height: 114%; 
 	letter-spacing: 0.304rem;
 	text-transform: uppercase;
+	@media (max-width: $mobile-xl) {
+		font-size: 2.4rem;
+	}
 }

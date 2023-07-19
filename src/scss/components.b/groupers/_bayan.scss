@@ -122,6 +122,10 @@
   border-color: #000 transparent transparent transparent;
   transform: none;
   background: transparent;
+
+  @media (max-width: $mobile-l) {
+    border-width: 1.5rem 0.9rem 0px 0.9rem;
+  }
 }
 .bayan--toggler-triangle .bayan__toggler::after {
   display: none;
@@ -130,6 +134,14 @@
 .bayan--opened .bayan__toggler {
   transform: rotate(180deg);
 }
-.bayan--opened .bayan__toggler::before {
+.bayan--toggler-triangle .bayan--opened .bayan__toggler::before {
   top: 0.7rem;
+
+  @media (max-width: $mobile-xl) {
+    top: -1.3rem;
+  }
+  @media (max-width: $mobile-l) {
+    left: 1.4rem;
+    top: 2.2rem;
+  }
 }

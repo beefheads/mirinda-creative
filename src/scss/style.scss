@@ -80,6 +80,9 @@ body {
   @media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
     font-size: 2rem;
   }
+  @media (max-width: $mobile-l) {
+    font-size: 2rem;
+  }
 }
 body._lock {
   overflow: hidden;

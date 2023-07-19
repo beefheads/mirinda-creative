@@ -2,9 +2,20 @@
 	position: relative;
 	padding-top: 24.6rem;
 	padding-bottom: 25rem;
+
+	@media (max-width: $laptop) {
+		padding-top: 14.6rem;
+    padding-bottom: 45rem;
+    overflow: hidden;
+	}
+	@media (max-width: $mobile-l) {
+		padding-bottom: 35rem;
+		padding-top: 7rem;
+	}
 }
 
 .footer__drop-left {
+  pointer-events: none;
   position: absolute;
   top: 15rem;
   left: 0;
@@ -14,20 +25,47 @@
   background-position: center;
   background-size: contain;
   transform: rotate(-62deg);
+
+  @media (max-width: $mobile-xl) {
+	  width: 13.7rem;
+	  height: 16rem;
+    transform: rotate(250deg);
+    top: 20rem;
+  }
+  @media (max-width: $mobile-l) {
+    width: 10.7rem;
+    height: 11rem;
+    top: 20rem;
+  }
 }
 
 .footer__char {
+	pointer-events: none;
 	position: absolute;
 	bottom: 0;
 	left: 6rem;
 	width: 77rem;
 	height: 64.7rem;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 	background-size: contain;
+
+	@media (max-width: $laptop) {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+    width: 57rem;
+    height: 44.7rem;
+	}
+	@media (max-width: $mobile-l) {
+		width: 100%;
+    height: 34.7rem;
+	}
 }
 
 .footer__decor-right {
+	pointer-events: none;
 	position: absolute;
 	right: 22rem;
 	top: 20rem;
@@ -36,8 +74,27 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $laptop) {
+		right: 4rem;
+    top: 46rem;
+    width: 22.5rem;
+    height: 25.1rem;
+	}
+	@media (max-width: $mobile-xl) {
+    top: unset;
+		right: 0;
+    left: 0;
+    bottom: 6rem;
+    width: 19.5rem;
+    height: 19.1rem;
+    margin-left: auto;
+    margin-right: auto;	
+	}
 }
+
 .footer__drop-right {
+	pointer-events: none;
   position: absolute;
   right: 16rem;
   top: 9rem;
@@ -47,4 +104,24 @@
   background-position: center;
   background-size: contain;
   transform: rotate(-156deg) scale(-1, 1);
+
+  @media (max-width: $laptop) {
+  	right: 6rem;
+    top: 5rem;
+    transform: rotate(-326deg) scale(-1, 1);
+  }
+
+  @media (max-width: $mobile-xl) {
+  	right: 2rem;
+  	top: 7rem;
+	  width: 10.5rem;
+	  height: 12.7rem;
+  }
+  @media (max-width: $mobile-l) {
+  	right: 0rem;
+    top: 14rem;
+    width: 8.5rem;
+    height: 11.7rem;
+    transform: rotate(-296deg) scale(-1, 1);
+  }
 }

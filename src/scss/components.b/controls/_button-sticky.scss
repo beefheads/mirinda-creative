@@ -14,6 +14,11 @@
   @media (max-width: $desktop-s) {
   	bottom: 42rem;
   }
+
+  @media (max-width: $laptop) {
+    bottom: 0rem;
+    margin-top: 5rem;
+  }
 }
 
 .button-sticky--hidden {
@@ -24,4 +29,12 @@
 
 .button-sticky--active {
   bottom: 5rem;
+
+  @media (max-width: $laptop) {
+    bottom: 2rem;
+  }
+
+  @media (max-width: $mobile-l) {
+    bottom: 0;
+  }
 }

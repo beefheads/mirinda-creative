@@ -1,20 +1,35 @@
 .speakers {
 	position: relative;
+
+  @media (max-width: $laptop) {
+    overflow: hidden;
+  }
 }
 
 .speakers__title {
 	margin-bottom: 7.6rem;
+
+  @media (max-width: $mobile-l) {
+    margin-bottom: 4.6rem;
+  }
 }
 
 .speakers__shelf {
+  --card-width: 30.6rem;
 	max-width: 127.6rem;
 	margin-left: auto;
 	margin-right: auto;
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, minmax(30.6rem, 1fr));
-	grid-template-columns: repeat(auto-fill, 30.6rem);
+	grid-template-columns: repeat(auto-fill, var(--card-width));
 	column-gap: 11.2rem;
 	row-gap: 4rem;
+
+  @media (max-width: $mobile-xl) {
+    grid-template-columns: 100%;
+    width: 100%;
+    row-gap: 7rem;
+  }
 }
 
 .speakers__blob-left-top {
@@ -28,6 +43,22 @@
   background-position: center;
   background-size: contain;
   transform: rotate(-69deg);
+
+  @media (max-width: $laptop) {
+    width: 28.3rem;
+    height: 16rem;
+    position: absolute;
+    left: 25.4rem;
+    top: 25rem;
+  }
+
+  @media (max-width: $mobile-xl) {
+    left: 0rem;
+    top: 75rem; 
+  }
+  @media (max-width: $mobile-l) {
+    display: none;
+  }
 }
 
 .speakers__blob-left-bottom {
@@ -41,6 +72,22 @@
   background-position: center;
   background-size: contain;
   transform: rotate(-90deg);
+
+  @media (max-width: $laptop) {
+    width: 17.3rem;
+    height: 24rem;
+    left: 41.4rem;
+    top: 69rem;
+  }
+
+  @media (max-width: $mobile-xl) {
+    left: 34.4rem;
+    top: 109rem;
+    transform: rotate(-90deg) scale(1, -1);
+  }
+  @media (max-width: $mobile-l) {
+    display: none;
+  }
 }
 
 .speakers__decor-left {
@@ -53,6 +100,28 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media (max-width: $laptop) {
+    width: 15.8rem;
+    height: 18.4rem;
+    position: absolute;
+    left: 0.4rem;
+    bottom: 66rem;
+  }
+
+  @media (max-width: $mobile-xl) {
+    left: 3.4rem;
+    bottom: 108rem; 
+  }
+
+  @media (max-width: $mobile-l) {
+    left: unset;
+    bottom: unset;
+    top: 2rem;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .speakers__decor-right {
@@ -65,17 +134,36 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media (max-width: $laptop) {
+    width: 15.9rem;
+    height: 20.7rem;
+    position: absolute;
+    right: 0.4rem;
+    top: 25rem;
+  }
 }
 
 .speakers__blob-right-bottom {
-	    display: block;
-    width: 13.3rem;
-    height: 17rem;
-    position: absolute;
-    right: 11.4rem;
-    bottom: -6.7rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transform: rotate(-154deg);
+  display: block;
+  width: 13.3rem;
+  height: 17rem;
+  position: absolute;
+  right: 11.4rem;
+  bottom: -6.7rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-154deg);
+
+  @media (max-width: $laptop) {
+    width: 23.3rem;
+    height: 27rem;
+    right: 1.4rem;
+    bottom: 3.3rem;
+    transform: rotate(-224deg)
+  }
+  @media (max-width: $mobile-xl) {
+    bottom: 60.3rem;
+  }
 }

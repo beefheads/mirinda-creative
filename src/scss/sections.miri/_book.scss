@@ -1,17 +1,28 @@
 .book {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: 7rem;
+	
+	@media (min-width: $mobile-l + 1) {
+		padding-bottom: 7rem;
+	}
 }
 
 .book__title {
 	margin-bottom: 5.3rem;
+	@media (max-width: $mobile-l) {
+		letter-spacing: 0.3rem;
+		margin-bottom: 2.3rem;
+	}
 }
 
 .book__offers {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: 4.8rem;
+	gap: 4.8rem;
+
+	@media (max-width: $laptop) {
+		grid-template-columns: 100%;
+	}
 }
 
 .book__offer {
@@ -37,6 +48,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: $mobile-xl) {
+		margin-right: auto;
+		margin-left: auto;
+		flex-direction: column;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 2.8rem;
+	}
 }
 
 .book__offer-title-icon {
@@ -47,15 +67,29 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 0;
+	}
+	@media (max-width: $mobile-l) {
+		width: 9rem;
+		height: 9.6rem;
+	}
 }
 
 .book__offer:nth-of-type(2) .book__offer-title-icon {
-  margin-left: -17rem;
-  margin-right: 1rem;
+  @media (min-width: $mobile-xl + 1) {
+	  margin-left: -17rem;
+	  margin-right: 1rem;
+  }
 }
 
 .book__offer-title-text {
 	margin-bottom: 2rem;
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 0rem;
+	}
 }
 
 
@@ -71,6 +105,14 @@
 	letter-spacing: 0.492rem;
 	text-transform: uppercase;
 	margin-bottom: 4.2rem;
+
+	@media (max-width: $mobile-l) {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+    letter-spacing: 0.392rem;
+	}
 }
 
 .book__offer-button {
@@ -89,4 +131,23 @@
   background-position: center;
   background-size: contain;
   pointer-events: none;
+
+  @media (max-width: $laptop) {
+    right: 0.2rem;
+    top: 5.4rem;
+    width: 29.6rem;
+    height: 38rem;	
+  }
+  @media (max-width: $mobile-xl) {
+  	right: 5.2rem;
+    top: -2.6rem;
+    width: 19.6rem;
+    height: 29rem;
+  }
+  @media (max-width: $mobile-l) {
+    right: -1.8rem;
+    top: -4.6rem;
+    width: 15.6rem;
+    height: 27rem;
+  }
 }
