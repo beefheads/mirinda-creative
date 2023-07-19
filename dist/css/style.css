@@ -2305,7 +2305,7 @@ body._lock {
   overflow: visible;
 }
 
-.section__bayan.bayan--opened .bayan__toggler {
+.section__bayan.bayan--opened > .bayan__top .bayan__toggler {
   opacity: 0;
 }
 
