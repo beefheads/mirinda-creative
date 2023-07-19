@@ -1,0 +1,50 @@
+.footer {
+	position: relative;
+	padding-top: 34.6rem;
+	padding-bottom: 25rem;
+}
+
+.footer__drop-left {
+  position: absolute;
+  top: 15rem;
+  left: 0;
+  width: 23.7rem;
+  height: 26rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-62deg);
+}
+
+.footer__char {
+	position: absolute;
+	bottom: 0;
+	left: 6rem;
+	width: 77rem;
+	height: 64.7rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.footer__decor-right {
+	position: absolute;
+	right: 22rem;
+	top: 20rem;
+	width: 32.5rem;
+	height: 35.1rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.footer__drop-right {
+  position: absolute;
+  right: 16rem;
+  top: 9rem;
+  width: 20.5rem;
+  height: 22.7rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-156deg) scale(-1, 1);
+}

@@ -1,0 +1,61 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 2.5rem;		
+	}
+}
+
+.pagination li {
+	border-radius: 9999px;
+	background: transparent;
+	border: 0.1rem solid var(--c-border);
+	columns: var(--fg-regular);
+	font-size: 1.4rem;
+	--size: 3.5rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2rem;
+	position: relative;
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 1rem;
+	}
+}
+
+.pagination li:hover {
+	@media (any-hover:hover) {
+		border-color: var(--c-second);
+	}
+}
+
+.pagination li.active {
+	color: var(--c-second);
+	border-color: var(--c-second);
+}
+
+.pagination li:last-child {
+	margin-right: 0;
+}
+
+.pagination a {
+	color: inherit;
+}
+
+.pagination a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}

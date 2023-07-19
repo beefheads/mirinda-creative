@@ -1,0 +1,42 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--fg-title);
+  margin-bottom: 1.4rem;//0.9rem;
+  font-size: 2.2rem;
+
+  @media (max-width: $mobile-xl) {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-item:last-child {
+  margin-bottom: unset;
+}
+
+.contact-item:hover {
+  @media (any-hover: hover) {
+      color: var(--c-primary);
+  }
+}
+
+.contact-item__icon {
+  --size: 3.2rem;
+  max-width: var(--size);
+  min-width: var(--size);
+  height:    var(--size);
+  margin-right: 1.4rem;
+
+  @media (max-width: $mobile-l) {
+    --size: 2.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.contact-item__text {
+  white-space: nowrap;
+  color: inherit;
+  transition: var(--tr-regular);
+}

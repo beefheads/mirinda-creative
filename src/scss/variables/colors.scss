@@ -1,0 +1,68 @@
+:root {
+  // Colors
+  --c-primary: #F6A6A3;
+
+  --c-second: #7FC4E1;
+  --c-second--light: #8BC8E3;
+  --c-second--dark: #64AAC9;
+
+  --fg-regular: #000;
+  --fg-second: #848483;
+  --fg-third: #ababab;
+  --fg-title: #5B5B5B;
+  --fg-primary: #565656;
+
+  --fg-on: #fff;
+  --fg-card-title: #444;
+  --fg-card-text-second: #c7c7c7;
+
+  --c-error: #E5042C;
+  --c-success: #34C759;
+  --c-border: #eee;
+
+  // BGs
+  --bg-app: #E6E6E6;
+  --bg-card: #fff;
+  --bg-primary: #FAF2EB;
+  --bg-second: #F9FBFF;
+}
+
+[data-theme="citrus"] {
+  --c-accent: #F4D372;
+  --c-active: #FFB709;
+
+  --bg-card: #EEC761;
+  --fg-active: #FFE29D;
+  --fg: #462A04;
+  --button-bg: url("../img/common/button-on-yellow.png");
+}
+
+[data-theme="berry"] {
+  --c-accent: #FFA9BE;
+  --c-active: #FF6588;
+
+  --bg-card: #FFA9BE;
+  --fg-active: #FCE9EA;
+  --fg: #462A04;
+  --button-bg: url("../img/common/button-on-magenta.png");
+}
+
+[data-theme="raw"] {
+  --c-accent: #7FC8EC;
+  --c-active: #36ABFF;
+
+  --bg-card: #7FC8EC;
+  --fg-active: #E2F3FF;
+  --fg: #23005C;
+  --button-bg: url("../img/common/button-on-cyan.png");
+}
+
+[data-theme="mango"] {
+  --c-accent: #F0BC70;
+  --c-active: #FFA530;
+
+  --bg-card: #F0BC70;
+  --fg-active: #FFE09F;
+  --fg: #5C0000;
+  --button-bg: url("../img/common/button-on-mango.png");
+}

@@ -1,0 +1,37 @@
+ @import "../components.b/controls/input";
+
+.input {
+  --input-padding: 1.1rem;
+  --border-color: transparent;
+  --brad: 0;
+  --fz: 2.4rem;
+  --lh: 111%;
+  font-weight: 550;
+  background-color: initial;
+  border: none;
+}
+.input__label {
+  background-color: #FB6A25;
+  text-align: center;
+  color: #000;
+  font-family: var(--ff-regular);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 111%;
+  letter-spacing: 0.492rem;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.1rem;
+  width: 100%;
+  display: block;
+}
+
+.input__field {
+  letter-spacing: 0.492rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0.1rem solid var(--border-color);
+}
+

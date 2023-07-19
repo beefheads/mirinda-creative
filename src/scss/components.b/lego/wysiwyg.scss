@@ -1,0 +1,216 @@
+.wysiwyg {
+	font-size: 1.8rem;
+	--accent: var(--c-second);
+	--fg-text: var(--fg-regular);
+	--ff-title: var(--ff-title);
+	--ff-regular: var(--ff-regular);
+
+	--fz-h1: 4rem;
+	--fz-h2: 3.5rem;
+	--fz-h3: 2.5rem;
+	--fz-h4: 2.3rem;
+	--fz-h5: 2rem;
+	--fz-h6: 1.8rem;
+
+	--fz-p: 1.8rem;
+
+	--fz-ul: 1.8rem;
+	--fz-li: 1.8rem;
+
+	@media (max-width: $mobile-xl) {
+		--fz-h1: 3rem;
+		--fz-h2: 2rem;
+		--fz-h3: 1.8rem;
+		--fz-h4: 1.6rem;
+		--fz-h5: 1.4rem;
+		--fz-h6: 1.2rem;
+
+		--fz-p: 1.4rem;
+
+		--fz-ul: 1.4rem;
+		--fz-li: 1.4rem;
+	}
+
+	color: var(--fg-regular);
+	line-height: 1.5;
+
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 600;
+		margin-bottom: 1.5em;
+		color: var(--fg-text);
+		font-family: var(--ff-title);
+		line-height: 108.538%;
+	}
+
+	h1 {
+		font-size: var(--fz-h1);
+	}
+
+	h2 {
+		font-size: var(--fz-h2);
+	}
+
+	h3 {
+		font-size: var(--fz-h3);
+	}
+
+	h4 {
+		font-size: var(--fz-h4);
+	}
+
+	h5 {
+		font-size: var(--fz-h5);
+	}
+
+	h6 {
+		font-size: var(--fz-h6);
+	}
+
+
+	p {
+		font-size: var(--fz-p);
+		font-family: var(--ff-regular);
+		line-height: 1.5;
+		line-height: initial;
+		margin-bottom: 3rem;
+	}
+	p ~ p {
+		margin-top: -1em;
+	}
+
+	p + h1[class=""],
+	p + h2[class=""],
+	p + h3[class=""],
+	p + h4[class=""],
+	p + h5[class=""],
+	p + h6[class=""] {
+		margin-top: 1.5em;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		white-space: nowrap;
+		color: var(--accent);
+		text-decoration: underline;
+		transition: var(--tr-regular);
+	}
+
+	a:hover {
+		@media (any-hover:hover) {
+			color: var(--c-second);
+		}
+	}
+
+	ul,
+	ol {
+		--list-gap: 3.5rem;
+		font-size: var(--fz-ul);
+		margin-bottom: 3rem;
+		padding-left: var(--list-gap);
+		padding-top: 0.5rem;
+
+		@media (max-width: $mobile-xl) {
+			--list-gap: 2rem;
+		}
+	}
+
+	ol {
+		counter-reset: ol;
+	}
+
+	ol > li {
+		counter-increment: ol;
+		list-style: none;
+		position: relative;
+	}
+	ol > li::before {
+		content: counter(ol)".";
+		position: absolute;
+		left: #{'calc(0px - var(--list-gap))'};
+		font-weight: 700;
+	}
+
+	li {
+		list-style: initial;
+		margin-bottom: 1rem;
+	}
+	
+	ol ul li {
+		list-style: initial;
+	}
+
+	button {
+		margin-bottom: 3rem;
+	}
+
+	img {
+		margin-bottom: 3rem;
+		border-radius: 1rem;
+	}
+}
+
+.wysiwyg-2 {
+	ol ul li {
+		list-style: none;
+		position: relative;
+	}
+	li {
+		list-style: none;
+		position: relative;
+		margin-bottom: 1rem;
+	}
+
+	ol > li::before {
+		--size: 2.5rem;
+		content: counter(ol);
+		color: var(--c-primary);
+		background-color: var(--bg-primary);
+		// left: #{'calc(0px - 1.2 * var(--list-gap))'};
+		max-width: var(--size);
+		min-width: var(--size);
+		width: var(--size);
+		height: var(--size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 999px;
+		@media (max-width: $mobile-xl) {
+			--size: 2rem;
+			left: #{'calc(0px - 1.2 * var(--list-gap))'};
+		}
+	}
+
+	ol ul li::before,
+	ul li::before {
+		content: "";
+    top: 0.7rem;
+    left: -2.4rem;
+		position: absolute;
+		display: block;
+		--size: 1.6rem;
+		max-width: var(--size);
+		min-width: var(--size);
+		width: var(--size);
+		height: var(--size);
+		background-image: url("../img/common/heart-list.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media (max-width: $mobile-xl) {
+			top: 0.45rem;
+			left: -2rem;
+			--size: 1.2rem;
+		}
+	}
+
+}

@@ -1,0 +1,136 @@
+.minicart-product {
+	--fz: 1.6rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position: relative;
+
+	@media (max-width: $mobile-xl) {
+		--fz: 1.4rem;
+	}
+}
+
+.minicart-product__media {
+	--size: 11.4rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-right: 1.9rem;
+	border: 0.1rem solid var(--c-border);
+	border-radius: 2rem;
+	display: block;
+	transition: all 0.3s ease;
+
+	@media (max-width: $mobile-xl) {
+		--size: 7.2rem;
+		margin-right: 1.2rem;
+	}
+}
+.minicart-product__media:hover {
+	@media (any-hover:hover) {
+		border-color: var(--c-second);
+	}
+}
+
+.minicart-product__media-pic,
+.minicart-product__media-img {
+	height: 100%;
+	width: 100%;
+	display: block;
+	border-radius: inherit;
+}
+
+.minicart-product__media-img {
+	object-position: top;
+	object-fit: cover;
+}
+
+.minicart-product__info {
+	padding-right: 1rem;
+	display: grid;
+	grid-template-columns: 1.3fr 0.7fr;
+	gap: 1rem;
+	align-items: center;
+	width: 100%;
+
+	@media (max-width: $mobile-xl) {
+		gap: 0.5rem;
+	}
+}
+
+.minicart-product__title {
+	position: relative;
+	color: #444;
+	font-size: var(--fz);
+	font-family: var(--ff-title);
+	font-weight: 400;
+	grid-column-end: span 2;
+}
+
+.minicart-product__link {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	transition: var(--tr-regular);
+}
+
+.minicart-product__link:hover {
+	@media (any-hover:hover) {
+		color: var(--c-second);
+	}
+}
+
+.minicart-product__link::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.minicart-product__price {
+	color: rgba(68, 68, 68, 1);
+	font-size: var(--fz);
+	font-family: var(--ff-title);
+	font-weight: 400;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 0.2rem;
+	}
+}
+
+.minicart-product__price-currency {
+	font-family: -apple-system, var(--ff-regular);
+	font-weight: 300;
+	font-size: var(--fz);
+}
+
+.minicart-product__button-remove {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	font-size: 2.4rem;
+	color: rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.minicart-product__button-remove:hover {
+	@media (any-hover:hover) {
+		color: #ff3b30;
+	}
+}
+
+.minicart-product__stepper {
+	--fz: 1.6rem;
+	@media (max-width: $mobile-xl) {
+		--fz: 1.4rem;
+	}
+}
+
+.minicart-product__row {
+	grid-column-end: span 2;
+	--fz: var(--fz);
+}

@@ -1,0 +1,70 @@
+.faq-card {
+	margin-bottom: 4.6rem;
+}
+.faq-card:last-child {
+	margin-bottom: 0;
+}
+
+.faq-card__question {
+	padding-top: 1.9rem;
+	padding-left: 7.7rem;
+	padding-bottom: 0.7rem;
+	padding-right: 7.7rem;
+	position: relative;
+	background-color: #FB6A25;
+}
+
+.faq-card__question-title {
+	color: #000;
+	font-size: 3.6rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 111%; /* 39.96px */
+	letter-spacing: 0.738rem;
+	text-transform: uppercase;
+}
+
+.faq-card .bayan__toggler {
+	position: absolute;
+  left: 2.9rem;
+  top: 2.2rem;
+}
+
+
+.faq-card__answer {
+	background-color: #fff;
+	margin-left: 6.5rem;
+	padding: 6.6rem;
+	padding-top: 1.3rem;
+	padding-bottom: 1.3rem;
+}
+
+.faq-card__answer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.faq-card__anser-media {
+	max-width: 47.6rem;
+	width: 100%;
+	margin-right: 2.4rem;
+	margin-top: 2rem;
+	margin-bottom: 5.6rem;
+}
+
+.faq-card__answer-text {
+	color: #000;
+	font-family: HelveticaNeueCyr;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 111%; /* 26.64px */
+	letter-spacing: 2.28px;
+	text-transform: uppercase;
+}
+
+.faq-card__anser-media + .faq-card__answer-text {
+	padding-top: 8rem;
+}

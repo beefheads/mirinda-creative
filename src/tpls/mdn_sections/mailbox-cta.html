@@ -1,0 +1,37 @@
+<section class="section cta">
+  <div class="container cta__container">
+    <div class="cta__offer">
+      <h2 class="section-title cta__title" data-aos="fade-up">
+        Получите прайс-лист по&nbsp;электронной почте
+      </h2>
+      <p class="section-desc cta__desc" data-aos="fade-up">
+        Сможете подобрать позиции под свой <br> 
+        бюджет, посчитать чистую прибыль, <br> 
+        выбрать самый выгодный вариант <br>
+        и&nbsp;перейти к&nbsp;оформлению заказа.
+      </p>
+    </div>
+    <form class="cta__form js_form">
+      <div class="form__hidden">
+        <input type="text" name="page" hidden>
+        <input type="text" name="formname" hidden>
+        <input type="text" name="additional" hidden>
+        
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="referer" value="">
+        <input type="hidden" name="requestTime" value="">
+        <input type="hidden" name="requestSimpleSign" value="">
+      </div>
+      <fieldset class="form__row">
+        @@include('tpls/input/email.html',{})
+        @@include('tpls/input/name.html',{})
+      </fieldset>
+      <button class="cta__form-submit form__submit button-filled button-primary" type="submit">Получить прайс</button>
+      <p class="form__caption">*мы не шлём спам, а пишем только по делу</p>
+    </form>
+  </div>
+</section>

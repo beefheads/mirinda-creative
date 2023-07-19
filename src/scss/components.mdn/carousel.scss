@@ -1,0 +1,74 @@
+.carousel {
+	padding-left: 4.5rem;
+	padding-right: 4.5rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.carousel-swiper {
+	padding-left: 3.8rem;
+	padding-right: 3.8rem;
+	overflow: hidden;
+
+	@media (max-width: $mobile-xl) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.carousel-swiper .swiper-wrapper {
+	margin-bottom: 8rem;
+	z-index: 1;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 6rem;
+	}
+}
+
+.carousel__nav {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+
+	@media (max-width: $mobile-xl) {
+		position: relative;
+	}
+}
+
+.carousel-button-prev,
+.carousel-button-next {
+	background-color: var(--bg-primary);
+	top: 35%;
+
+	@media (max-width: $mobile-xl) {
+		top: unset;
+		bottom: 0;
+	}
+}
+
+.carousel-button-prev {
+
+}
+.carousel-button-next {
+
+}
+
+.carousel-pagination {
+// .swiper-pagination {
+	@media (max-width: $mobile-xl) {
+		max-width: 75%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	@media (max-width: $mobile-l) {
+		max-width: 55%;
+	}
+}
+
+.carousel-slide {
+	height: 100%;
+}

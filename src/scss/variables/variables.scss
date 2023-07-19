@@ -1,0 +1,54 @@
+$laptop-l: 1500px;
+$laptop-m: 1368px;
+$laptop: 1100px;
+$tablet: 992px;
+$tablet-l: 962px;
+$tablet-m: 768px;
+
+$desktop-l: 1800px;
+$desktop-m: 1500px;
+$desktop-s: 1280px;
+
+$mobile-xl: 601px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+
+$w-burger: $tablet;
+
+:root {
+  --base-size: 1vw;//#{"calc(1vw + 1vh)"};
+  @media (min-width: $mobile-l + 1) and (max-width: $tablet) {
+    //--base-size: #{"calc(1vw + 1vh)"};
+  }
+  --tr: 0.3s;
+  --tr-regular: all var(--tr) ease;
+
+  --p-container: 7rem;
+  // @media (max-width: $desktop-s) and (min-width: $tablet + 1) {
+  //   --p-container: 4.5rem;
+  // }
+
+  // @media (max-width: $laptop) {
+  //   --p-container: 1.8rem;
+  // }
+
+  @media (max-width: $mobile-xl) {
+    --p-container: 1.6rem;
+  }
+
+  // Widths
+  --w-container: 154rem;
+  // --w-container: 100%;
+  // @media (max-width: $tablet) {
+  //   --w-container: 100%;
+  // }
+
+  --z-above-header: 103;
+  --z-burger: 102;
+  --z-header: 100;
+  --z-main: 99;
+  --z-footer: 100;
+
+  --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
+}

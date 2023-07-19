@@ -1,0 +1,41 @@
+.button-primary {
+	display: block;
+	background-color: #CBE243;
+	color: #000;
+	padding-top: 0.9rem;
+	padding-bottom: 1.5rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	font-family: var(--ff-regular);
+	font-style: normal;
+	font-weight: 900;
+	letter-spacing: 0.3rem;
+}
+
+.button-second {
+	display: inline-block;
+	background-color: #FFC501;
+	color: #000;
+	padding-top: 1rem;
+	padding-bottom: 1.1rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-family: var(--ff-regular);
+	font-style: normal;
+	font-weight: 900;
+	letter-spacing: 0.19rem;
+}
+
+.button__text {
+	color: #000;
+	line-height: 114%; /* 36.48px */
+	border-bottom: 0.2rem solid;
+}

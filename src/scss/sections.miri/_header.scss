@@ -1,0 +1,32 @@
+.header {
+	padding-top: 2.2rem;
+	padding-bottom: 2.2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+.header__container {
+	position: relative;
+}
+
+.header__marquee {
+	width: 100%;
+	padding-top: 1.2rem;
+	padding-bottom: 1rem;
+	background: #C5E52B;
+	color: #000;
+	font-family: HelveticaNeueCyr;
+	font-size: 4.5rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: initial;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.header__marquee-text {
+	margin-left: 6rem;
+}

@@ -1,0 +1,40 @@
+<section class="section bestseller">
+  <div class="container bestseller__container">
+    <h2 class="section-title bestseller__title" data-aos="fade-up">Хиты продаж</h2>
+    <p class="section-desc bestseller__desc" data-aos="fade-up">
+      Разбирают безотказно — <br>
+      подтверждено отзывами клиентов
+    </p>
+    <div class="bestseller-carousel carousel">
+      <div class="swiper carousel-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card--has-price.html',{})
+          </div>
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card.html',{})
+          </div>
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card.html',{})
+          </div>
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card.html',{})
+          </div>
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card.html',{})
+          </div>
+          <div class="swiper-slide carousel-slide">
+            @@include('tpls/mdn/product-card.html',{})
+          </div>
+        </div>
+      </div>
+      <div class="carousel__nav">
+        <div class="swiper-buttons carousel-buttons">
+          <div class="swiper-button-prev carousel-button-prev"></div>
+          <div class="swiper-button-next carousel-button-next"></div>
+        </div>
+        <div class="swiper-pagination carousel-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

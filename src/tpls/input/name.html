@@ -1,0 +1,15 @@
+<label class="input input-name js_form__control">
+  @@if (typeof context.label != 'undefined') {
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      ФИО
+    </span>
+  }
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    autocomplete="name"
+    required
+  >
+</label>

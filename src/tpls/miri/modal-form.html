@@ -1,0 +1,22 @@
+<div class="b_modal modal" id="@@id" data-closer-type="inner">
+	<div class="modal__decor-left-top" style="background-image: url('./img/common/lightning.png');"></div>
+	<div class="modal__decor-left-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
+	<div class="container modal__container">
+		<div class="modal__tags section-text--stroked">
+			<p class="modal__tag">#лекции</p>
+			<p class="modal__tag">#smm</p>
+			<p class="modal__tag">#креатив</p>
+		</div>
+		<form action="mail.php" class="js_form form">
+			<fieldset class="form__fields">
+				@@include("../input/name.html", {label: true})
+				@@include("../input/calendar.html", {label: true,})
+				@@include("../input/tel.html", {label: true})
+				@@include("../input/email.html", {label: true})
+			</fieldset>
+			<button class="button-second form__button-submit">Отправить</button>
+		</form>
+	</div>
+	<div class="modal__decor-right-top" style="background-image: url('./img/common/user.png')"></div>
+	<div class="modal__decor-right-bottom" style="background-image: url('./img/common/star.png');"></div>
+</div>

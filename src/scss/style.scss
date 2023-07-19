@@ -1,0 +1,126 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use "sass:math";
+
+@import "./variables/variables";
+@import "./variables/colors";
+@import "./mixins";
+
+
+// Шрифты
+@include font('HelveticaNeueCyr', normal, 550, '../resources/fonts/helveticaneuecyr/helveticaneuecyr-medium');
+@include font('HelveticaNeueCyr', normal, 700, '../resources/fonts/helveticaneuecyr/helveticaneuecyr-bold');
+@include font('HelveticaNeueCyr', normal, 900, '../resources/fonts/helveticaneuecyr/helveticaneuecyr-black');
+:root {
+  --ff-regular: "HelveticaNeueCyr", sans-serif;
+}
+
+// Сброс CSS
+@import "./reset";
+@import "./normalize";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+
+html {
+  overscroll-behavior: none;
+  --fz-modifier: 0.520834;
+  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
+  background-color: #FFC600;
+
+  background-image: url("../img/common/bg.jpg");
+  background-repeat: repeat-y;
+  background-position: top;
+  background-size: 100%;
+
+  // @media (max-width: $desktop-l) {
+  //   --fz-modifier: 0.625;
+  // }
+
+  // @media (max-width: $desktop-m)  {
+  //   --fz-modifier: 0.694444;
+  // }
+
+  @media (max-width: $laptop) {
+    --fz-modifier: 1.020834;
+  }
+
+  @media (max-width: $mobile-xl) {
+    --fz-modifier: 1.663894;
+  }
+
+  @media (max-width: $mobile-l) {
+    --fz-modifier: 3.125;
+  }
+  /*
+  @media (max-width: $tablet) {
+    font-size: #{'calc(2 * 1.0395 * var(--base-size))'};//calc(1.0395 * var(--base-size));//calc(1.0582 * var(--base-size));
+  }
+  @media (max-width: $desktop-l) {
+    // font-size: #{'font-size: calc(0.570834 * var(--base-size));'};//calc(1.0395 * var(--base-size));//calc(1.0582 * var(--base-size));
+    font-size: #{'calc(0.570834 * var(--base-size))'};
+  }
+  @media (max-width: $mobile-l) {
+    font-size:  #{'calc(3.125 * var(--base-size))'};//calc(0.980397 * var(--base-size)); // 10px for 320×700
+  }
+   */
+}
+
+body {
+  color: var(--fg-regular);
+  font-family: var(--ff-regular);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 111%;
+
+  overscroll-behavior: none;
+
+  @media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
+    font-size: 2rem;
+  }
+}
+body._lock {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  //overflow: hidden;
+}
+.wrapper > .content {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: #{'calc(var(--w-container) + 2 * var(--p-container))'};
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--p-container);
+  padding-right: var(--p-container);
+}
+
+.main {
+  @media (max-width: $laptop) {
+    margin-top: auto;
+  }
+}
+
+
+// Библиотеки
+// @import "./libs/swiper";
+// @import "./libs/fancybox";
+
+@import "./components";
+@import "./sections";
+@import "./pages";
+@import "./modifiers";

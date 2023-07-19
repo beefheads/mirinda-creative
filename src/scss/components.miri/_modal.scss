@@ -1,0 +1,192 @@
+ @import "../components.b/lego/modal";
+
+:root {
+   --bg-overlay-visible: rgb(136,77,73, 0.8);
+}
+
+.modal {
+	max-width: 100%;
+	width: 100%;
+	border-radius: 0;
+	padding-top: 11.5rem;
+	padding-bottom: 10rem;
+	background: url("../img/hero/hero.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.modal::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background-color: #CBE243;
+}
+
+.b_modal__aligner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.modal__tags {
+	position: absolute;
+	top: -4rem;
+	left: 31rem;
+	--c-fg-stroke: #000;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 125%; /* 25px */
+	text-transform: uppercase;
+}
+
+.modal__container {
+	z-index: 2;
+	position: relative;
+}
+
+
+.modal__decor-left-top {
+  position: absolute;
+  left: 19rem;
+  top: 13rem;
+  z-index: 2;
+  display: block;
+  width: 12.8rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.modal__decor-left-top::before {
+	content: "";
+  position: absolute;
+  left: -60%;
+  top: -67%;
+  display: block;
+  width: 230%;
+  height: 210%;
+  background-image: url('../img/common/select-square.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.modal__decor-left-bottom {
+	position: absolute;
+  bottom: 4.5rem;
+  left: 12rem;
+  width: 27.6rem;
+  height: 27.8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-84deg);
+  z-index: 2;
+}
+
+.modal__decor-right-top {
+	position: absolute;
+  top: -23rem;
+  right: 4rem;
+  width: 48.6rem;
+  height: 58rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
+}
+
+.modal__decor-right-bottom {
+  position: absolute;
+  right: 18rem;
+  bottom: 15rem;
+  z-index: 2;
+  display: block;
+  width: 12.8rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.modal__decor-right-bottom::before {
+  content: "";
+  position: absolute;
+  left: -67%;
+  top: -56%;
+  display: block;
+  width: 230%;
+  height: 210%;
+  background-image: url(../img/common/select-square.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(45deg);
+}
+
+.b_modal__closer {
+	z-index: 3;
+	background-color: transparent;
+	background-image: url("../img/common/close.svg");
+}
+.b_modal__closer::after,
+.b_modal__closer::before {
+  --closer-color: transparent;
+}
+
+
+.modal__slogan {
+	max-width: 58.3rem;
+	width: 100%;
+	height: 23.7rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3.5rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.modal__title {
+	color: #000;
+	text-align: center;
+	font-size: 6.4rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 111%; /* 71.04px */
+	letter-spacing: 1.312rem;
+	text-transform: uppercase;
+	margin-bottom: 0.6rem;
+}
+
+.modal__desc {
+	color: #000;
+	text-align: center;
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 111%;
+	letter-spacing: 0.492rem;
+	text-transform: uppercase;
+	margin-bottom: 4.8rem;
+}
+
+.modal__button {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 37.5rem;
+	display: block;
+	font-size: 3.2rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 114%; 
+	letter-spacing: 0.304rem;
+	text-transform: uppercase;
+}

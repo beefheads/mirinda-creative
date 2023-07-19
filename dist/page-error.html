@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница ошибки</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230719041252">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__container">
+    <a href="/" class="header__logo logo">
+      <!-- <img src="./img/common/header-logo.svg" alt="maddog.by" class="logo__img"> -->
+      <svg class="logo__img">
+        <use href="./img/common/header-logo.svg#header-logo">
+      </svg>
+    </a>
+    <div class="header__menu">
+      <nav class="nav header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item header__nav-item--active">
+            <span class="header__nav-link">О MAD DOG</span>
+          </li>
+          <li class="header__nav-item">
+            <a href="about.html" class="header__nav-link">О MAD DOG</a>
+          </li>
+          <li class="header__nav-item header__nav-item--active">
+            <span class="header__nav-link">ПРОДУКТЫ</span>
+          </li>
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link">ПРОДУКТЫ</a>
+          </li>
+          <li class="header__nav-item header__nav-item--active">
+            <span class="header__nav-link">КОКТЕЙЛИ</span>
+          </li>
+          <li class="header__nav-item">
+            <a href="cocktails.html" class="header__nav-link">КОКТЕЙЛИ</a>
+          </li>
+          <li class="header__nav-item header__nav-item--active">
+            <span class="header__nav-link">ОБРАТНАЯ СВЯЗЬ</span>
+          </li>
+          <li class="header__nav-item">
+            <a href="contacts.html" class="header__nav-link">ОБРАТНАЯ СВЯЗЬ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="https://www.instagram.com/maddog.vodka/" target="_blank" class="header__nav-link">
+              <svg class="header__nav-icon">
+                <use href="./img/common/logo-instagram.svg#logo-instagram">
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="section-error">
+          <div class="container section-error__container">
+            <h2 class="section-title section-error__status">404</h2>
+            <p class="section-desc section-error__desc">
+              Попробуйте вернуться на главную страницу
+            </p>
+            <a href="#" class="button button-filled button-primary">Вернуться на главную</a>
+          </div>
+        </section>
+      </main>
+
+
+      <footer class="footer">
+  <div class="footer__drop-left" style="background-image: url('./img/hero/drops-1.png')"></div>
+  <div class="footer__char" style="background-image: url('./img/footer/char.png')"></div>
+  <div class="container footer__container">
+    <div class="socials footer__socials">
+      <a href="https://www.instagram.com/mirinda_belarus/?igshid=OGIzYTJhMTRmYQ%3D%3D" target="_blank" class="socials__link">
+        <svg class="socials__icon">
+          <use href="./img/common/logo-instagram.svg#logo-instagram" />
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@mirindabelarus" target="_blank" class="socials__link socials__link--telegram">
+        <svg class="socials__icon">
+          <use href="./img/common/logo-telegram.svg#logo-telegram" />
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@mirindabelarus" target="_blank" class="socials__link  socials__link--youtube">
+        <svg class="socials__icon">
+          <use href="./img/common/logo-youtube.svg#logo-youtube" />
+        </svg>
+      </a>
+    </div>
+    <div class="footer__decor-right" style="background-image: url('./img/footer/emoji.png')"></div>
+    <div class="footer__drop-right" style="background-image: url('./img/hero/drops-1.png')"></div>
+  </div>
+</footer>
+
+    </div>
+
+    <div class="b_modal modal" id="online" data-closer-type="inner">
+	<div class="modal__decor-left-top" style="background-image: url('./img/common/lightning.png');"></div>
+	<div class="modal__decor-left-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
+	<div class="container modal__container">
+		<div class="modal__tags section-text--stroked">
+			<p class="modal__tag">#лекции</p>
+			<p class="modal__tag">#smm</p>
+			<p class="modal__tag">#креатив</p>
+		</div>
+		<form action="mail.php" class="js_form form">
+			<fieldset class="form__fields">
+				<label class="input input-name js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      ФИО
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    autocomplete="name"
+    required
+  >
+</label>
+
+				<label class="input input-calendar js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Дата рождения
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_birthday"
+    type="text"
+    required
+  >
+</label>
+
+				<label class="input input-tel js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Телефон
+    </span>
+  
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+    required
+  >
+</label>
+
+				<label class="input input-email js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Почта
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    autocomplete="email"
+    required
+  >
+</label>
+
+			</fieldset>
+			<button class="button-second form__button-submit">Отправить</button>
+		</form>
+	</div>
+	<div class="modal__decor-right-top" style="background-image: url('./img/common/user.png')"></div>
+	<div class="modal__decor-right-bottom" style="background-image: url('./img/common/star.png');"></div>
+</div>
+
+<div class="b_modal modal" id="offline" data-closer-type="inner">
+	<div class="modal__decor-left-top" style="background-image: url('./img/common/lightning.png');"></div>
+	<div class="modal__decor-left-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
+	<div class="container modal__container">
+		<div class="modal__tags section-text--stroked">
+			<p class="modal__tag">#лекции</p>
+			<p class="modal__tag">#smm</p>
+			<p class="modal__tag">#креатив</p>
+		</div>
+		<form action="mail.php" class="js_form form">
+			<fieldset class="form__fields">
+				<label class="input input-name js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      ФИО
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    autocomplete="name"
+    required
+  >
+</label>
+
+				<label class="input input-calendar js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Дата рождения
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_birthday"
+    type="text"
+    required
+  >
+</label>
+
+				<label class="input input-tel js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Телефон
+    </span>
+  
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+    required
+  >
+</label>
+
+				<label class="input input-email js_form__control">
+  
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Почта
+    </span>
+  
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    autocomplete="email"
+    required
+  >
+</label>
+
+			</fieldset>
+			<button class="button-second form__button-submit">Отправить</button>
+		</form>
+	</div>
+	<div class="modal__decor-right-top" style="background-image: url('./img/common/user.png')"></div>
+	<div class="modal__decor-right-bottom" style="background-image: url('./img/common/star.png');"></div>
+</div>
+
+<div class="b_modal modal" id="thanks" data-closer-type="inner">
+	<div class="modal__decor-left-top" style="background-image: url('./img/common/lightning.png');"></div>
+	<div class="modal__decor-left-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
+	<div class="modal__tags section-text--stroked">
+		<p class="modal__tag">#лекции</p>
+		<p class="modal__tag">#smm</p>
+		<p class="modal__tag">#креатив</p>
+	</div>
+	<div class="container modal__container">
+		<div class="modal__slogan" style="background-image: url('./img/hero/slogan.png');"></div>
+		<h2 class="modal__title">Спасибо за <br> регистрацию!</h2>
+		<p class="modal__desc">
+			Все новости и ссылка на трансляцию будет <br>
+			в нашем телеграмм-канале, подписывайся!
+		</p>
+		<a href="#" class="button-second modal__button">
+			<span class="button__text">Перейти в ТГ</span>
+		</a>
+	</div>
+	<div class="modal__decor-right-top" style="background-image: url('./img/common/user.png')"></div>
+	<div class="modal__decor-right-bottom" style="background-image: url('./img/common/star.png');"></div>
+</div>
+
+    <script src="./js/bundle.min.js?_v=20230719041252"></script>
+  </body>
+</html>

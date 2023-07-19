@@ -1,0 +1,357 @@
+/*
+* Пример использования компонента кнопки
+*/
+
+:root {
+  --fz-button: 2rem;
+  --fw-button: 600;
+  --lh-button: initial;
+
+
+  @media (max-width: $mobile-xl) {
+    --fz-button: 1.7rem;
+  }
+}
+
+.button-primary {
+  --button-bg: var(--c-primary);
+  --button-bg-hover: var(--c-primary);
+  --button-color: var(--fg-on);
+  --button-color-hover: var(--fg-on);
+  --button-border-color: var(--c-primary);
+  --button-border-color-hover: var(--c-primary);
+}
+
+.button-second {
+  --button-bg: var(--c-second);
+  --button-bg-hover: var(--c-second);
+  --button-color: var(--fg-on);
+  --button-color-hover: var(--fg-on);
+  --button-border-color: var(--c-second);
+  --button-border-color-hover: var(--c-second);
+}
+
+.button-third:not(span) {
+  --button-bg: transparent;
+  --button-bg-hover: var(--c-second);
+  --button-color: #B4B4B4;
+  --button-color-hover: var(--fg-on);
+  --button-border-color: var(--c-border);
+  --button-border-color-hover: var(--c-second);
+}
+
+.button-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.8rem 4rem 2.9rem 4rem;
+
+  border: 1px solid var(--button-border-color); //1
+
+  font-size: var(--fz-button);
+  font-weight: var(--fw-button);
+  line-height: var(--lh-button);
+
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 9999px;
+  color: var(--button-color);
+  --icon-color: var(--button-color);
+  background-color: var(--button-bg, transparent);
+
+  transition: var(--tr-regular);
+
+  @media (max-width: $mobile-xl) {
+    // padding: 1.6rem 3.5rem 2.1rem 3.5rem;
+    padding: 1.6rem 3.5rem 1.9rem 3.5rem;
+  }
+}
+
+.button-filled:hover {
+  @media (any-hover:hover) {
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover);
+    box-shadow: inset 10.4463px 11.9387px 11.9387px rgba(255, 255, 255, 0.16), inset -7.46167px -2.98467px 11.9387px rgba(255, 255, 255, 0.12);
+  }
+}
+
+.button--disabled,
+.button--wait {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button-stroke {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 1.5rem 1.5rem 1.7rem;
+  border: 1px solid var(--button-border-color);
+  background-color: transparent;
+  color: var(--fg-regular);
+  transition: var(--tr-regular);
+  text-align: center;
+
+  @media (max-width: $mobile-xl) {
+    padding: 0.9rem 1.5rem;
+  }
+}
+.button-third.button-stroke {
+  background-color: var(--button-bg, transparent);
+  color: var(--button-color, var(--fg-regular));
+}
+
+.button-stroke:hover {
+  @media (any-hover:hover) {
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover);
+    box-shadow: inset 10.4463px 11.9387px 11.9387px rgba(255, 255, 255, 0.16), inset -7.46167px -2.98467px 11.9387px rgba(255, 255, 255, 0.12);
+  }
+}
+
+.button-ghost {
+  --fz-button: 1.6rem;
+  --button-bg: transparent;
+  --button-color: var(--c-second--dark);
+  --button-bg-hover: var(--c-second);
+  --button-color-hover: var(--fg-on);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.3rem 3.1rem 1.5rem 3.1rem;
+  font-weight: var(--fw-button);
+  line-height: var(--lh-button);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 9999px;
+  color: var(--button-color);
+  transition: var(--tr-regular);
+}
+
+.button-ghost::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: var(--button-bg, transparent);
+  background-image: url("../img/common/draw-button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: var(--tr-regular);
+}
+
+.button-ghost:hover {
+  @media (any-hover:hover) {
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover)
+  }
+}
+.button-ghost:hover::after {
+  @media (any-hover:hover) {
+    opacity: 0;
+  }
+}
+
+
+/*
+  Swiper Buttons
+ */
+.swiper-button-prev {
+
+}
+.swiper-button-prev:after {
+  color: transparent;
+}
+.swiper-button-prev .swiper-button__icon {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(-1, 1);
+}
+.swiper-button-next {
+
+}
+.swiper-button-next:after {
+  color: transparent;
+}
+.swiper-button-next .swiper-button__icon {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-prev .swiper-button__icon,
+.swiper-button-next .swiper-button__icon {
+  fill: var(--bg-element);
+  stroke: var(--c-text-regular);
+  transition: var(--tr);
+}
+.swiper-button-prev:hover .swiper-button__icon,
+.swiper-button-next:hover .swiper-button__icon {
+  @media (any-hover:hover) {
+    fill: var(--c-text-regular);
+    stroke: var(--bg-element);
+  }
+}
+/*
+.button[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.button:active {
+  @media (min-width: $minHover) {
+    opacity: 0.6;
+  }
+}
+
+.button__text {
+  width: 100%;
+  font-size: inherit;
+}
+
+.button__icon {
+  display: block;
+  --width: 1.2857142857142858em; //18
+  width: var(--button-icon-size, var(--width));
+  min-width: var(--button-icon-size, var(--width));
+  max-width: var(--button-icon-size, var(--width));
+  height: 1.4285714285714286em; //20
+  background-color: transparent;
+  fill: var(--icon-color);
+  stroke: none;
+  transition: all var(--tr) ease;
+}
+.button--icon-stroke .button__icon {
+  fill: transparent;
+  stroke: var(--icon-color);
+}
+
+.button--icon-left .button__icon {
+  order: -1;
+  margin-right: 0.57em;
+}
+.button--icon-right .button__icon {
+  order: 5;
+  margin-left: 0.57em;
+}
+.button__icon path {
+  stroke: var(--button-color);
+}
+.button--icon-left ,
+.button--icon-right {
+  padding: 1.3571428571428572em 3.4285714285714284em; // 19 48
+}
+
+// Вариации кнопок
+.button--primary {
+  --button-bg: var(--bg-button-primary);
+  --button-color: var(--c-text-on);
+}
+.button--primary:hover {
+  @media (any-hover:hover) {
+    --button-bg: var(--bg-button-secondary);
+  }
+}
+
+.button--secondary {
+  --button-bg: var(--bg-button-secondary);
+  --button-color: var(--c-text-on);
+}
+.button--secondary:hover {
+  @media (any-hover:hover) {
+    border: 1px solid #EFF2F5;
+    background: transparent;
+    --button-color: var(--c-text-regular);
+  }
+}
+
+.button--ghost {
+  --button-bg: transparent;
+  border-color: var(--bg-button-secondary);
+}
+
+.button--on:hover {
+  @media (any-hover:hover) {
+    --button-color: var(--c-text-on);
+  }
+}
+*/
+
+
+/*
+  @mdg
+
+  button-paper
+
+*/
+.button-paper {
+  // --button-bg: 
+  --button-fg: #462A04;
+
+  display: inline-block;
+  position: relative;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  padding-left: 6.4rem;
+  padding-right: 6.4rem;
+  color: var(--button-fg);
+  font-family: var(--ff-title);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal; 
+  min-width: 31.3rem;
+  margin-left: -5rem;
+  text-align: center;
+  transition: var(--tr-regular);
+}
+
+.showcase--has-opened .button-paper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button-paper .button__text {
+  display: inline-block;
+  color: inherit;
+  position: relative;
+  z-index: 2;
+  transition: inherit;
+  font-size: inherit;
+}
+
+.button-paper:hover .button__text {
+  @media (any-hover:hover) {
+    transform: scale(1.1);
+  }
+}
+
+.button__bg {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: var(--button-bg, url("../img/common/button-on-snow.png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: var(--tr-regular);
+}

@@ -1,0 +1,147 @@
+.review-card {
+	padding-top: 4rem;
+	padding-right: 10rem;
+	padding-bottom: 6.9rem;
+	padding-left: 4rem;
+	border-radius: 2rem;
+	background: var(--bg-card);
+	box-shadow: 0px 1.4rem 4.4rem 0px rgba(197, 197, 197, 0.25);
+	margin-bottom: 3rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 2rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-bottom: 6.6rem;
+	}
+}
+
+.reviews__masonry	> .review-card {
+	width: 48%;
+
+	@media (max-width: $mobile-xl) {
+		width: 100%;
+	}
+}
+
+.review-card__profile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 3rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 4.8rem;
+		
+	}
+}
+
+.review-card__profile-media {
+	margin-right: 2.7rem;
+	border-radius: 9999px;
+	--size: 13rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+
+	@media (max-width: $mobile-xl) {
+		--size: 8rem;
+		margin-right: 1.6rem;
+	}
+}
+
+.review-card__profile-media-pic {
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.review-card__profile-media-img {
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.review-card__profile-info {
+	padding-top: 0.8rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 0.5rem;
+	}
+}
+
+.review-card__profile-title {
+	color: #444;
+	font-size: 2.5rem;
+	font-family: var(--ff-title);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+	margin-bottom: 0.9rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.8rem;
+		margin-bottom: 0.3rem;
+		
+	}
+}
+.review-card__profile-desc {
+	color: #a1a1a1;
+	font-size: 1.8rem;
+	font-family: var(--ff-title);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.4rem;
+	}
+}
+
+
+.review-card__feedback-content {
+	position: relative;
+	padding-left: 5.3rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-left: 0;
+	}
+}
+
+.review-card__feedback-content::before,
+.review-card__feedback-content::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 3.5rem;
+	height: 2.2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (max-width: $mobile-xl) {
+		width: 2.1rem;
+		height: 1.3rem;
+	}
+}
+
+.review-card__feedback-content::before {
+	background-image: url("../img/reviews/quote-open.svg");
+	left: 0;
+	top: 0;
+
+	@media (max-width: $mobile-xl) {
+		top: -3.1rem;
+	}
+}
+.review-card__feedback-content::after {
+	background-image: url("../img/reviews/quote-close.svg");
+	right: -3.5rem;
+	bottom: 0;
+
+	@media (max-width: $mobile-xl) {
+		bottom: -2.9rem;
+		right: 0;
+	}
+}

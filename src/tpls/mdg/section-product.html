@@ -1,0 +1,132 @@
+<section class="section product">
+  <div class="container product__container">
+    <div class="product__hero">
+      <p class="product__hero-name">
+        <span class="product__hero-name-text">@@model</span>
+      </p>
+      <div class="product__media">
+        <picture class="product__media-pic">
+          <source srcset="./img/@@img/product.webp" type="image/webp">
+          <img src="./img/@@img/product.png" alt="MAD DOG VODKA @@model" class="product__media-img">
+        </picture>
+        <div class="product__media-decor-1" style="background-image: url('./img/@@img/@@img.png');"></div>
+        @@if (typeof hide_ice == 'undefined') {
+	        <div class="product__media-decor-2" style="background-image: url('./img/@@img/ice-1.png');"></div>
+        }
+        @@if (typeof hide_ice == 'undefined') {
+	        <div class="product__media-decor-3" style="background-image: url('./img/@@img/ice-2.png');"></div>
+        }
+      </div>
+    </div>
+    <div class="product__details">
+      <div class="product__details-tabs">
+        <button class="button-paper product__details-tabs-button product__details-tabs-button--active" type="button">
+          <span class="button__text">ПРОДУКТЫ</span>
+          <span class="button__bg"></span>
+        </button>
+        <a href="@@cocktail.html" class="button-paper product__details-tabs-button">
+          <span class="button__text">КОКТЕЙЛИ</span>
+          <span class="button__bg"></span>
+        </a>
+      </div>
+      <h1 class="product__title">
+        <span class="section-text--bold">MAD DOG VODKA</span><br>
+        <span class="product__title-model">@@model</span>
+      </h1>
+      <p class="product__desc">
+      	@@desc
+      </p>
+      <ul class="product__stats-list">
+        <li class="product__stat">
+          <span class="product__stat-title">Объем:</span>
+          <span class="product__stat-value">0,5 л</span>
+        </li>
+        <li class="product__stat">
+          <span class="product__stat-title">Крепость:</span>
+            <span class="product__stat-value">@@degrees %</span>
+        </li>
+      </ul>
+
+      <section class="showcase product__related">
+          <div class="runway showcase__runway">
+            <div class="runway__shaft">
+              <div class="runway__lift">
+                @@if (img == 'citrus') {
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--berry',
+                    title: 'C*berry',
+                    img: 'berry',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--raw',
+                    title: 'Raw',
+                    img: 'raw',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--mango',
+                    title: 'Mangogo',
+                    img: 'mango',
+                  })
+                }
+                @@if (img == 'berry') {
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--citrus',
+                    title: 'Citrust',
+                    img: 'citrus',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--raw',
+                    title: 'Raw',
+                    img: 'raw',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--mango',
+                    title: 'Mangogo',
+                    img: 'mango',
+                  })
+                }
+                @@if (img == 'raw') {
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--citrus',
+                    title: 'Citrust',
+                    img: 'citrus',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--berry',
+                    title: 'C*berry',
+                    img: 'berry',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--mango',
+                    title: 'Mangogo',
+                    img: 'mango',
+                  })
+                }
+                @@if (img == 'mango') {
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--citrus',
+                    title: 'Citrust',
+                    img: 'citrus',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--berry',
+                    title: 'C*berry',
+                    img: 'berry',
+                  })
+                  @@include('../mdg/showcase-card.html', {
+                    className: 'showcase-card--raw',
+                    title: 'Raw',
+                    img: 'raw',
+                  })
+                }
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <div class="product__details-decor" style="background-image: url('./img/@@img/ice-last.png');">
+      </div>
+    </div>
+    
+  </div>
+</section>

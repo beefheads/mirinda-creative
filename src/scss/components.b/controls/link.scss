@@ -1,0 +1,51 @@
+.link {
+  color: var(--c-second);
+  font-weight: 700;
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: var(--tr-regular);
+}
+
+.link__text {
+  font-size: inherit;
+  border-bottom: 0.1rem solid transparent;
+}
+.link:hover .link__text {
+  @media (any-hover:hover) {
+    border-bottom: 0.1rem solid;
+  }
+}
+
+.link__icon {
+  font-size: inherit;
+  display: block;
+  width: 0.334em;
+  height: 0.556em;
+  margin-left: 0.334em;
+  transition: var(--tr-regular);
+}
+.link:hover .link__icon {
+  @media (any-hover:hover) {
+    transform: rotate(-45deg);
+  }
+}
+
+.link-second {
+  --link-color: var(--fg-third);
+  display: inline;
+  color: var(--link-color);
+  font-size: inherit;
+  transition: var(--tr-regular);
+  border-bottom: 1px solid;
+}
+
+.link-second:hover {
+  @media (any-hover:hover) {
+    --link-color: var(--c-second)
+  }
+}

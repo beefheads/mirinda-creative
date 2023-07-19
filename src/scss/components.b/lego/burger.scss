@@ -1,0 +1,58 @@
+/*
+    <button class="burger header__burger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+*/
+
+.burger {
+  --line-width: 47.5%;
+  --line-height: 3px;
+  --c-burger-line: #000;
+  position: relative;
+  width: var(--burger-width, 40px);
+  height: var(--burger-height, 40px);
+  transition: var(--tr);
+  margin-left: 3rem;
+
+  @media (min-width: $w-burger+ 1) {
+    display: none;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-width, 47.5%);
+  height: var(--line-height, 0.2rem);
+  background: var(--c-burger-line);
+  transition: var(--tr);
+  border-radius: 2rem;
+}
+
+.burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 8px));
+}
+
+.burger__line:nth-child(2) {
+  transform: translate(-50%, calc(-50% + 0px));
+}
+
+.burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 8px));
+  transform-origin: left;
+}
+
+.burger.is-active .burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 0px)) rotate(45deg);
+}
+.burger.is-active .burger__line:nth-child(2) {
+  width: 0;
+}
+.burger.is-active .burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% - 0px)) rotate(-45deg);
+  transform-origin: unset;
+}

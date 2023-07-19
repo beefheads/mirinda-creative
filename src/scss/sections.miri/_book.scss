@@ -1,0 +1,92 @@
+.book {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 7rem;
+}
+
+.book__title {
+	margin-bottom: 5.3rem;
+}
+
+.book__offers {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4.8rem;
+}
+
+.book__offer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.book__offer-body {
+}
+
+.book__offer-title {
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 4.8rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 111%; /* 53.28px */
+	letter-spacing: 0.984rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.book__offer-title-icon {
+	display: block;
+	width: 14rem;
+	height: 16.6rem;
+	margin-right: 3.7rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.book__offer:nth-of-type(2) .book__offer-title-icon {
+  margin-left: -17rem;
+  margin-right: 1rem;
+}
+
+.book__offer-title-text {
+	margin-bottom: 2rem;
+}
+
+
+.book__offer-desc {
+	padding-left: 3rem;
+	padding-right: 3rem;
+	color: #000;
+	text-align: center;
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 111%;
+	letter-spacing: 0.492rem;
+	text-transform: uppercase;
+	margin-bottom: 4.2rem;
+}
+
+.book__offer-button {
+	font-size: 2rem;
+	width: 100%;
+}
+
+.book__decor-right {
+  display: block;
+  position: absolute;
+  right: 0.2rem;
+  top: -4.6rem;
+  width: 49.6rem;
+  height: 58rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}

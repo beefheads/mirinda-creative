@@ -1,0 +1,43 @@
+.contacts {
+
+}
+.contacts__title {
+	color: #005EAA;
+	font-family: var(--ff-title);
+	font-size: 6.4rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 103%;
+	margin-bottom: 7.1rem;
+	text-align: center;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 3.4rem;
+		font-size: 3.2rem;
+	}
+}
+
+.contacts__form {
+	border-radius: 2.1rem;
+	background: #DDE3EC;
+	padding: 6rem 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.contats__form-submit {
+	background-color: transparent;
+	margin-left: 0;
+	margin-top: 4rem;
+	--button-fg: #005EAA;
+	font-size: 2rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	@media (max-width: $mobile-xl) {
+		min-width: 100%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		font-size: 1.9rem;
+		margin-top: 1rem;
+	}
+}

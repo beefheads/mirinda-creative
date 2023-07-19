@@ -1,0 +1,47 @@
+.textarea {
+  --fg-color: #005EAA;
+  --border-color: #E7E7EB;
+  --input-bg: #E7E7EB;
+  --fz: 1.6rem;
+  --lh: initial;
+  --input-padding: 1.2rem;
+  --brad: 0.9rem;
+  border-radius: var(--brad);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 20rem;
+}
+
+.textarea.is-invalid:not(.input--focused) {
+  --c-placeholder: var(--c-error);
+  --fg-color: var(--c-error);
+}
+
+.textarea__field {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 42px;
+  resize: none;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--brad);
+  padding: var(--input-padding);
+  font-size: var(--fz);
+  line-height: var(--lh);
+  color: var(--fg-color);
+  min-height: inherit;
+  position: relative;
+  border-radius: inherit;
+  min-height: inherit;
+}
+
+.textarea__field::placeholder {
+  color: #005EAA;
+}
+

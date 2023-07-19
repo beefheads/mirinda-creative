@@ -1,0 +1,156 @@
+<section class="section cocktail cocktail--@@theme">
+  <div class="container cocktail__container">
+    <div class="cocktail__hero">
+      <p class="cocktail__hero-name">
+        <span class="cocktail__hero-name-text">@@model</span>
+      </p>
+      <div class="cocktail__media">
+        <picture class="cocktail__media-pic">
+          <source srcset="./img/cocktails/@@img.webp" type="image/webp">
+          <img src="./img/cocktails/@@img.jpg" alt="MAD DOG VODKA @@model" class="cocktail__media-img">
+        </picture>
+        <div class="cocktail__media-decor-1" style="background-image: url('./img/@@theme/@@theme.png');"></div>
+        @@if (typeof hide_ice == 'undefined') {
+	        <div class="cocktail__media-decor-2" style="background-image: url('./img/@@theme/ice-1.png');"></div>
+        }
+        @@if (typeof hide_ice == 'undefined') {
+	        <div class="cocktail__media-decor-3" style="background-image: url('./img/@@theme/ice-2.png');"></div>
+        }
+      </div>
+    </div>
+    <div class="cocktail__details">
+      <div class="cocktail__details-tabs">
+        <a href="@@theme.html" class="button-paper cocktail__details-tabs-button">
+          <span class="button__text">ПРОДУКТЫ</span>
+          <span class="button__bg"></span>
+        </a>
+        <button class="button-paper cocktail__details-tabs-button  cocktail__details-tabs-button--active" type="button">
+          <span class="button__text">КОКТЕЙЛИ</span>
+          <span class="button__bg"></span>
+        </button>
+      </div>
+      <h1 class="cocktail__title">
+        <span class="section-text--bold">КОКТЕЙЛЬ</span><br>
+        <span class="cocktail__title-model">@@model</span>
+      </h1>
+      <div class="cocktail__desc">
+        <div class="cocktail__ingridients">
+          <h3 class="cocktail__ingridients-title">
+            Необходимые ингредиенты:
+          </h3>
+          <ul class="cocktail__ingridients-list">
+            @@for (var i = 0; i < ingridients.length; i++) {
+              <li class="cocktail__ingridients-item">
+                <span class="section-text--bold">
+                  `+volume[i]+`
+                </span>
+                `+ingridients[i]+`
+              </li>
+            }
+          </ul>
+        </div>
+        <div class="cocktail__steps">
+          <h3 class="cocktail__steps-title">Приготовление:</h3>
+          <ol class="cocktail__steps-list">
+            @@for (var i = 0; i < steps.length; i++) {
+              <li class="cocktail__steps-item">`+steps[i]+`</li>
+            }
+          </ol>
+        </div>
+      </div>
+
+      <section class="showcase product__related cocktail__related">
+          <div class="runway showcase__runway">
+            <div class="runway__shaft">
+              <div class="runway__lift">
+                @@if (img == 'love-me-love') {
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--berry',
+                    title: 'Полный дзен',
+                    img: 'berry',
+                    pic: 'full-zen',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--raw',
+                    title: 'Кайпироска',
+                    img: 'raw',
+                    pic: 'kaipiroska',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--mango',
+                    title: 'Такая лайф',
+                    img: 'mango',
+                    pic: 'this-life',
+                  })
+                }
+                @@if (img == 'full-zen') {
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--citrus',
+                    title: 'Люби меня люби',
+                    img: 'citrus',
+                    pic: 'love-me-love',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--raw',
+                    title: 'Кайпироска',
+                    img: 'raw',
+                    pic: 'kaipiroska',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--mango',
+                    title: 'Такая лайф',
+                    img: 'mango',
+                    pic: 'this-life',
+                  })
+                }
+                @@if (img == 'kaipiroska') {
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--citrus',
+                    title: 'Люби меня люби',
+                    img: 'citrus',
+                    pic: 'love-me-love',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--berry',
+                    title: 'Полный дзен',
+                    img: 'berry',
+                    pic: 'full-zen',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--mango',
+                    title: 'Такая лайф',
+                    img: 'mango',
+                    pic: 'this-life',
+                  })
+                }
+                @@if (img == 'this-life') {
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--citrus',
+                    title: 'Люби меня люби',
+                    img: 'citrus',
+                    pic: 'love-me-love',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--berry',
+                    title: 'Полный дзен',
+                    img: 'berry',
+                    pic: 'full-zen',
+                  })
+                  @@include('../mdg/showcase-card-cocktail.html',{
+                    className: 'showcase-card--raw',
+                    title: 'Кайпироска',
+                    img: 'raw',
+                    pic: 'kaipiroska',
+                  })
+                }
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <div class="cocktail__details-decor" style="background-image: url('./img/@@theme/ice-last.png');">
+      </div>
+    </div>
+    
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<label class="input input-tel js_form__control">
+  @@if (typeof context.label != 'undefined') {
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Телефон
+    </span>
+  }
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+    required
+  >
+</label>

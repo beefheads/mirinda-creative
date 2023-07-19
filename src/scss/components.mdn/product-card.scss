@@ -1,0 +1,226 @@
+.product-card {
+	--gap-inline: 2.4rem;
+	--gap-block: 2.2rem;
+	--brad: 2.46rem;
+	background-color: var(--bg-card);
+	border: 1px solid #F1F1F1;
+	border-radius: var(--brad);
+	padding-top: var(--gap-block);
+	padding-right: var(--gap-inline);
+	padding-bottom: 3.5rem;
+	padding-left: var(--gap-inline);
+	transition: var(--tr-regular);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media (max-width: $mobile-xl) {
+		--gap-inline: 1rem;
+		--gap-block: 0.8rem;
+		--brad: 1rem;
+		padding: var(--gap-block) var(--gap-inline) 1rem;
+		min-width: 14rem;
+	}
+}
+
+.product-card:hover {
+	@media (any-hover:hover) {
+		border-color: transparent;
+		box-shadow: 0px 17.2667px 54.2667px rgba(197, 197, 197, 0.25);
+	}
+}
+
+.product-card__info {
+	margin-bottom: 1.4rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1rem;
+	}
+}
+
+.product-card__media {
+	position: relative;
+	display: block;
+	width: auto;
+	max-width: initial;
+	height: 44.3rem;
+	background: #FBFBFB;
+	border-radius: var(--brad) var(--brad) 0 0;
+	margin-bottom: 2rem;
+	margin-top: #{'calc(0px - var(--gap-block))'};
+	margin-left: #{'calc(0px - var(--gap-inline))'};
+	margin-right: #{'calc(0px - var(--gap-inline))'};
+	overflow: hidden;
+	border-bottom: 0.1rem solid var(--c-border);
+
+	@media (max-width: $mobile-xl) {
+		--brad: 0.86rem;
+		height: 19.2rem;
+		margin-bottom: 0.9rem;
+	}
+}
+
+.product-card__pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.product-card__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	border-radius: inherit;
+	transition: var(--tr-regular);
+}
+
+.product-card__media:hover .product-card__img {
+	@media (any-hover:hover) {
+		transform: scale(1.2);
+	}
+}
+
+.product-card__title {
+	font-size: 2.22rem;
+	margin-bottom: 0.5rem;
+	line-height: 1;
+	color: var(--fg-card-title);
+	font-weight: 700;
+	position: relative;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.4rem;
+	}
+}
+
+.product-card__link {
+	color: inherit;
+	transition: var(--tr-regular);
+}
+
+.product-card__link:hover {
+	@media (any-hover:hover) {
+		color: var(--c-second);
+	}
+}
+
+.product-card__link::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.product-card__link::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.product-card__stat {
+	font-size: 1.85rem;
+	line-height: 1.2;
+	font-weight: 400;
+	margin-bottom: 1rem;
+	display: flex;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.0rem;
+		margin-bottom: 0.3rem;
+	}
+}
+.product-card__stat:last-child {
+	margin-bottom: 0;
+}
+
+.product-card__stat-title {
+	color: var(--fg-card-text-second);
+	margin-right: 0.4em;
+}
+
+.product-card__buttons {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	@media (max-width: $laptop) {
+		display: grid;
+		justify-content: stretch;
+	}
+}
+
+.product-card__button {
+	--button-color: var(--button-border-color);
+	color: var(--button-color);
+
+	@media (max-width: $laptop) {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.1rem;
+	}
+}
+
+
+.product-card__button:not(:last-child) {
+	min-width: 47%;
+	margin-right: 1.6rem;
+	@media (max-width: $laptop) {
+		margin-bottom: 1.6rem;
+		margin-right: 0;
+	}
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1rem;
+	}
+}
+
+.product-card__price {
+	font-size: 1.85rem;
+	display: flex;
+	align-items: center;
+  margin-bottom: 0.5rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+
+  }
+}
+
+.product-card__price-new {
+	margin-right: 1rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 0.5rem;
+	}
+}
+
+.product-card__price-old {
+	font-size: 1.8rem;
+	text-decoration: line-through;
+	color: var(--fg-third);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.1rem;
+	}
+}
+
+.product-card__price-currency {
+	font-family: -apple-system, var(--ff-regular);
+	font-weight: 300;
+}
+
+.carousel-slide .product-card {
+	height: 100%;
+}

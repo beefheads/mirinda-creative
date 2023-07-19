@@ -1,0 +1,36 @@
+.showcase {
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+	--drop-color: #fff;
+	overflow: hidden;
+
+	@media (max-width: $laptop) {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		// margin-left: #{'calc(0px - var(--p-container))'};
+		// margin-right: #{'calc(0px - var(--p-container))'};
+	}
+}
+.showcase[data-name="citrus"] {
+	--drop-color: #F4D372;
+}
+.showcase[data-name="berry"] {
+	--drop-color: #FFA9BE;
+}
+.showcase[data-name="raw"] {
+	--drop-color: #7FC8EC;
+}
+.showcase[data-name="mango"] {
+	--drop-color: #F0BC70;
+}
+
+.showcase .runway {
+	// margin-right: #{'calc(0px - var(--p-container))'};
+}
+
+.showcase__container {
+	@media (max-width: $laptop) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

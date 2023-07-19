@@ -1,0 +1,48 @@
+.decor-ui {
+	width: 18.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+	position: absolute;
+	left: 0;
+	top: -0.5rem;
+	background-color: #ffc600;
+	border: 0.1rem solid #000;
+	z-index: 3;
+}
+.decor-ui::after {
+	content: "";
+	width: 1.2rem;
+	height: 1.2rem;
+	background-color: #fff;
+	background-image: url("../img/common/close.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: relative;
+}
+
+.speakers-card__decor-ui {
+	top: -1.5rem;
+	width: 17.6rem;
+}
+
+.input__label-decor-ui::after,
+.programm__line-decor-ui::after,
+.speakers-card__decor-ui::after {
+	top: -1rem;
+	right: -0.5rem;
+
+}
+
+.programm__line-decor-ui {
+	left: unset;
+	right: 0;
+}
+
+.input__label-decor-ui {
+	width: 13.5rem;
+	left: unset;
+	right: 0.5rem;
+}
