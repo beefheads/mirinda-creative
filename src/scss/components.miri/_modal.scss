@@ -61,6 +61,7 @@
 	font-weight: 900;
 	line-height: 125%; /* 25px */
 	text-transform: uppercase;
+	z-index: 2;
 
 	@media (max-width: $laptop) {
 		top: 1rem;
@@ -68,6 +69,16 @@
 	}
   @media (max-width: $mobile-xl) {
   	display: none;
+  }
+}
+
+.modal-thanks .modal__tags {
+	top: 16rem;
+  left: 41rem;
+
+  @media (max-width: $laptop) {
+  	top: 6rem;
+    left: 1rem;
   }
 }
 

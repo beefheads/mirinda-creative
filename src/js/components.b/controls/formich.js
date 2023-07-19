@@ -137,9 +137,14 @@ async function onFormSuccess(event) {
       if (result.status) {
         // console.log('success')
         setFormStatusOk(form)
+        const lastPopup = window.b_modal.getLastOpenedId();
+
+        window.b_modal.closePop(lastPopup);
+        window.b_modal.openPop('thanks');
       }
-    } catch {
+    } catch (error) {
       console.warn('form return error')
+      console.warn(error)
       // window.b_modal.openPop('modal-error')
       resetSubmitButtonText(form)
       enableSubmitButton(form)

@@ -1995,6 +1995,7 @@ body._lock {
   font-weight: 900;
   line-height: 125%; /* 25px */
   text-transform: uppercase;
+  z-index: 2;
 }
 @media (max-width: 1100px) {
   .modal__tags {
@@ -2005,6 +2006,17 @@ body._lock {
 @media (max-width: 601px) {
   .modal__tags {
     display: none;
+  }
+}
+
+.modal-thanks .modal__tags {
+  top: 16rem;
+  left: 41rem;
+}
+@media (max-width: 1100px) {
+  .modal-thanks .modal__tags {
+    top: 6rem;
+    left: 1rem;
   }
 }
 
