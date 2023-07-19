@@ -10,25 +10,35 @@ const bayanOpenedClass = "bayan--opened";
 // const bayanHeight = 2000;
 
 function openBayan(bayanObject) {
-  // bayanObject.bottom.bayan.style.display = "block";
-  // bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
-  bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
-  bayanObject.bottom.bayan.querySelectorAll("a").forEach((anchor) => {
+  const {top, bottom, bayan} = bayanObject;
+  top.bayan.parentElement.classList.add(bayanOpenedClass);
+  bottom.bayan.querySelectorAll("a").forEach((anchor) => {
     anchor.setAttribute("tabindex", "0");
   });
-  // setTimeout(() => {
-  // }, 10);
+
+  const bayanOpen = new CustomEvent("bayan-open", {
+    detail: {
+    },
+  });
+  bayan.dispatchEvent(bayanOpen);
 }
 
 function closeBayan(bayanObject) {
-  // bayanObject.bottom.bayan.style.maxHeight = "0";
-  bayanObject.top.bayan.parentElement.classList.remove(bayanOpenedClass);
-  bayanObject.bottom.bayan.querySelectorAll("a").forEach((anchor) => {
+  const {top, bottom, bayan} = bayanObject;
+
+  top.bayan.parentElement.classList.remove(bayanOpenedClass);
+  bottom.bayan.querySelectorAll("a").forEach((anchor) => {
     anchor.setAttribute("tabindex", "-1");
   });
   setTimeout(() => {
     // bayanObject.bottom.bayan.style.display = "none";
   }, 401);
+
+  const bayanClose = new CustomEvent("bayan-close", {
+    detail: {
+    },
+  });
+  bayan.dispatchEvent(bayanClose);
 }
 
 function toggleBayan(bayanObject) {
@@ -58,6 +68,13 @@ function createBayans(bayans) {
       },
       bayan,
     };
+
+    bayan.openBayan = () => {
+      openBayan(bayanObject);
+    }
+    bayan.closeBayan = () => {
+      closeBayan(bayanObject);
+    }
 
     function createBayanStructure(bayanObject) {
       let bayanTop = document.createElement("div");

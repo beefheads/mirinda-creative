@@ -1,8 +1,7 @@
 .speakers {
 	position: relative;
-
+  overflow: hidden;
   @media (max-width: $laptop) {
-    overflow: hidden;
   }
 }
 
@@ -33,6 +32,7 @@
 }
 
 .speakers__blob-left-top {
+  pointer-events: none;
 	display: block;
   width: 28.3rem;
   height: 26rem;
@@ -62,6 +62,7 @@
 }
 
 .speakers__blob-left-bottom {
+  pointer-events: none;
   display: block;
   width: 7.3rem;
   height: 14rem;
@@ -100,6 +101,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: var(--tr-regular);
+  pointer-events: none;
 
   @media (max-width: $laptop) {
     width: 15.8rem;
@@ -122,6 +125,10 @@
     width: 10rem;
     height: 10rem;
   }
+}
+
+.section--closed .speakers__decor-left {
+  opacity: 0;
 }
 
 .speakers__decor-right {
@@ -150,11 +157,13 @@
   height: 17rem;
   position: absolute;
   right: 11.4rem;
-  bottom: -6.7rem;
+  bottom: -4.3rem;
+  // bottom: -6.7rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transform: rotate(-154deg);
+  transition: all 0.3s ease;
 
   @media (max-width: $laptop) {
     width: 23.3rem;
@@ -166,4 +175,8 @@
   @media (max-width: $mobile-xl) {
     bottom: 60.3rem;
   }
+}
+
+.section--closed .speakers__blob-right-bottom {
+  opacity: 0;
 }

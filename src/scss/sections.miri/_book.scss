@@ -131,6 +131,7 @@
   background-position: center;
   background-size: contain;
   pointer-events: none;
+  transition: var(--tr-regular);
 
   @media (max-width: $laptop) {
     right: 0.2rem;
@@ -150,4 +151,7 @@
     width: 15.6rem;
     height: 27rem;
   }
+}
+.section--closed .book__decor-right {
+	opacity: 0;
 }

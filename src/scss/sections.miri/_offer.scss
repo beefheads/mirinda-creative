@@ -9,6 +9,8 @@
 }
 .offer__title::after {
 	content: "";
+	pointer-events: none;
+	transition: var(--tr-regular);
 	position: absolute;
   top: -4rem;
   right: -8.5rem;
@@ -23,6 +25,9 @@
 	@media (max-width: $mobile-l) {
 		right: 1.5rem;
 	}
+}
+.section--closed .offer__title::after {
+	opacity: 0;
 }
 
 .offer__subtitle {

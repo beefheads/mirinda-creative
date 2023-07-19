@@ -43,7 +43,7 @@
 	position: absolute;
 }
 
-.bayan--opened .bayan__bottom {
+.bayan--opened > .bayan__bottom {
 	opacity: 1;
   grid-template-rows: 1fr;
 }
@@ -131,7 +131,7 @@
   display: none;
 }
 
-.bayan--opened .bayan__toggler {
+.bayan--opened > .bayan__top .bayan__toggler {
   transform: rotate(180deg);
 }
 .bayan--toggler-triangle .bayan--opened .bayan__toggler::before {
