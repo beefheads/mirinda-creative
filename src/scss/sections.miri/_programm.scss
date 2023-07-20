@@ -1,10 +1,10 @@
 .programm {
 	position: relative;
-	padding-bottom: 11rem;
 	overflow: hidden;
+}
 
-	@media (max-width: $laptop) {
-	}
+.programm:not(.section--closed) {
+	padding-bottom: 11rem;
 }
 
 .programm__title {
@@ -12,6 +12,9 @@
 	@media (max-width: $mobile-l) {
 		margin-bottom: 4.6rem;
 	}
+}
+.section--closed .programm__title {
+  margin-bottom: 0;
 }
 
 .programm__list {

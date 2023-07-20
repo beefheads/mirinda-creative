@@ -3211,6 +3211,10 @@ body._lock {
   }
 }
 
+.section--closed .speakers__title {
+  margin-bottom: 0;
+}
+
 .speakers__shelf {
   --card-width: 30.6rem;
   max-width: 127.6rem;
@@ -3395,9 +3399,13 @@ body._lock {
 
 .programm {
   position: relative;
-  padding-bottom: 11rem;
   overflow: hidden;
 }
+
+.programm:not(.section--closed) {
+  padding-bottom: 11rem;
+}
+
 .programm__title {
   margin-bottom: 8.6rem;
 }
@@ -3405,6 +3413,10 @@ body._lock {
   .programm__title {
     margin-bottom: 4.6rem;
   }
+}
+
+.section--closed .programm__title {
+  margin-bottom: 0;
 }
 
 .programm__list {
@@ -3662,6 +3674,10 @@ body._lock {
   display: inline-block;
 }
 
+.section--closed .offer__title {
+  margin-bottom: 0;
+}
+
 .offer__title::after {
   content: "";
   pointer-events: none;
@@ -3860,8 +3876,9 @@ body._lock {
   position: relative;
   overflow: hidden;
 }
+
 @media (min-width: 451px) {
-  .book {
+  .book:not(.section--closed) {
     padding-bottom: 7rem;
   }
 }
@@ -3874,6 +3891,10 @@ body._lock {
     letter-spacing: 0.3rem;
     margin-bottom: 2.3rem;
   }
+}
+
+.section--closed .book__title {
+  margin-bottom: 0;
 }
 
 .book__offers {
@@ -4028,11 +4049,11 @@ body._lock {
   opacity: 0;
 }
 
-.faq__title {
+.faq:not(.section--closed) .faq__title {
   margin-bottom: 5rem;
 }
 @media (max-width: 450px) {
-  .faq__title {
+  .faq:not(.section--closed) .faq__title {
     margin-bottom: 2.5rem;
   }
 }

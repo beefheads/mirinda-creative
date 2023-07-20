@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIRINDA CREATIVE DAY, 03 августа 2023</title>
-    <link rel="stylesheet" href="./css/style.css">
-
-    <!-- Отключить автодетект телефонов -->
-    <meta name="format-detection" content="telephone=no">
-
-    <link rel="icon" type="image/png" href="./img/common/favicon.png">
-    <meta property="og:title" content="MIRINDA CREATIVE DAY, 03 августа 2023">
-    <meta property="og:description" content="Эй, Минск, заскучал? 3 августа Mirinda прокачает все современное комьюнити в направлении креатива! Если ты только начинаешь свой путь в креативной индустрии или тебе интересно послушать настоящих экспертов в области создания контента, то ты просто не можешь это пропустить!">
-              
-    <meta property="og:image" content="./img/common/og.png">
-    <!-- <meta property="og:site_name" content=""> -->
-    <!-- <meta property="og:locale" content="ru_RU"> -->
-    
-    <meta property="og:type" content="website">
-    <meta property="twitter:card" content="summary_large_image">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/common/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/common/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/common/favicon-16x16.png">
-    <link rel="manifest" href="/img/common/site.webmanifest">
-    <link rel="mask-icon" href="/img/common/safari-pinned-tab.svg" color="#FFC600">
-    <link rel="shortcut icon" href="/img/common/favicon.ico">
-    <meta name="msapplication-TileColor" content="#FFC600">
-    <meta name="msapplication-config" content="/img/common/browserconfig.xml">
-    <meta name="theme-color" content="#FFC600">
+      @@include('tpls/b/meta-head.html',{
+        "title": "MIRINDA CREATIVE DAY, 03 августа 2023",
+        "desc": "Эй, Минск, заскучал? 3 августа Mirinda прокачает все современное комьюнити в направлении креатива! Если ты только начинаешь свой путь в креативной индустрии или тебе интересно послушать настоящих экспертов в области создания контента, то ты просто не можешь это пропустить!",
+        "themeColor": "#FFC600",
+      })
+      <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page-home">
     <div class="wrapper">

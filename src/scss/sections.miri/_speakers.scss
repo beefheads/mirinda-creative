@@ -13,6 +13,10 @@
   }
 }
 
+.section--closed .speakers__title {
+  margin-bottom: 0;
+}
+
 .speakers__shelf {
   --card-width: 30.6rem;
 	max-width: 127.6rem;

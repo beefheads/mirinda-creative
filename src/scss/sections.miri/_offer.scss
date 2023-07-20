@@ -7,6 +7,11 @@
 	margin-bottom: 2rem;
 	display: inline-block;
 }
+
+.section--closed .offer__title {
+	margin-bottom: 0;
+}
+
 .offer__title::after {
 	content: "";
 	pointer-events: none;

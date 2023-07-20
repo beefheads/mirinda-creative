@@ -1,7 +1,9 @@
 .book {
 	position: relative;
 	overflow: hidden;
-	
+}
+
+.book:not(.section--closed) {
 	@media (min-width: $mobile-l + 1) {
 		padding-bottom: 7rem;
 	}
@@ -13,6 +15,10 @@
 		letter-spacing: 0.3rem;
 		margin-bottom: 2.3rem;
 	}
+}
+
+.section--closed .book__title {
+	margin-bottom: 0;
 }
 
 .book__offers {
