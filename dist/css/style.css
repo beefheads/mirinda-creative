@@ -1289,6 +1289,7 @@ body._lock {
   position: sticky;
   max-width: 37.5rem;
   bottom: 24rem;
+  bottom: 32rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1300,9 +1301,19 @@ body._lock {
     bottom: 36rem;
   }
 }
+@media (max-width: 1500px) {
+  .button-sticky {
+    bottom: 46rem;
+  }
+}
+@media (max-width: 1368px) {
+  .button-sticky {
+    bottom: 35rem;
+  }
+}
 @media (max-width: 1280px) {
   .button-sticky {
-    bottom: 42rem;
+    bottom: 40rem;
   }
 }
 @media (max-width: 1100px) {
@@ -1957,8 +1968,8 @@ body._lock {
 }
 @media (max-width: 450px) {
   .modal {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
   }
 }
 

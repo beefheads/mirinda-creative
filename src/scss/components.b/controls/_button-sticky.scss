@@ -2,6 +2,7 @@
   position: sticky;
   max-width: 37.5rem;
 	bottom: 24rem;
+  bottom: 32rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -11,8 +12,17 @@
   @media (max-width: $desktop-l) {
   	bottom: 36rem;
   }
+  @media (max-width: $desktop-m) {
+    bottom: 46rem;
+  }
+
+  @media (max-width: $laptop-m) {
+    // bottom: 20rem;
+    bottom: 35rem;
+  }
   @media (max-width: $desktop-s) {
-  	bottom: 42rem;
+    bottom: 40rem;
+    // bottom: 46rem;
   }
 
   @media (max-width: $laptop) {
