@@ -9,6 +9,9 @@
     class="input__field"
     name="user_birthday"
     type="text"
+    @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+    }
     readonly
     required
   >

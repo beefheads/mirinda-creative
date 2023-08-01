@@ -168,7 +168,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       extractUTM(form);
 
-
       const inputsToValidate = [
         ...form.querySelectorAll('.js_form__control')
       ];
@@ -207,13 +206,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     selectedDropdown: "input--selected-dropdown",
   };
 
-  function activateInput(input) {
-  //   input.classList.add(inputClasses.active);
-  }
-  function deactivateInput(input) {
-  //   input.classList.remove(inputClasses.active);
-  }
-
   function initInputs(inputs) {
     inputs.forEach((input) => {
       if (input.classList.contains(inputClasses.init)) return;
@@ -221,23 +213,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       const field = input.querySelector("[required]");
 
-      input.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("input__field")) return;
-        if (input.classList.contains(inputClasses.activeDropdown)) {
-          deactivateInput(input);
-        } else {
-          activateInput(input);
-        }
-      });
-
       if (!field) return;
 
       field.addEventListener("focus", () => {
-        activateInput(input);
-        // setInputValid(input);
       });
+
       field.addEventListener("blur", () => {
-        deactivateInput(input);
         if (field.value != "") {
           validateInput(input);
         }

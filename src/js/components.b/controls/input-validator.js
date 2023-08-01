@@ -96,7 +96,7 @@ export function validatePhone(input) {
   // let regex = /^\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
   let regex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
   let phoneRegex = {
-    by: /^(?:\+375|80)\d{9}$/,
+    by: /^(?:\+375|375|80)\d{9}$/,
 
   }
   if (phoneRegex.by.test(field.value)) {

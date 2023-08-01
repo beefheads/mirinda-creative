@@ -13,5 +13,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	    autohide: true,
 		  keyboardNav: false,
 		}); 	
+
+		calendar.addEventListener('changeDate', () => {
+			datepicker.hide();
+		})
+
+	  calendar.addEventListener("focus", function() {
+	    this.blur();
+			datepicker.hide();
+	  });
 	})
 });

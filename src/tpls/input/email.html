@@ -10,6 +10,9 @@
     name="user_email"
     type="email"
     autocomplete="email"
-    required
+    @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+    }
+    required 
   >
 </label>

@@ -13,6 +13,9 @@
     maxlength="25"
     minlength="10"
     autocomplete="tel"
+    @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+    }
     required
   >
 </label>

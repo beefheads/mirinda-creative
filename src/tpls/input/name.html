@@ -10,6 +10,9 @@
     name="user_name"
     type="text"
     autocomplete="name"
+    @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+    }
     required
   >
 </label>

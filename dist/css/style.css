@@ -1760,6 +1760,7 @@ body._lock {
 }
 
 .decor-ui::after {
+  display: none;
   content: "";
   width: 1.2rem;
   height: 1.2rem;
@@ -2459,7 +2460,7 @@ body._lock {
 }
 @media (max-width: 450px) {
   .input__field {
-    letter-spacing: 0.192rem;
+    letter-spacing: 0;
   }
 }
 
@@ -2770,7 +2771,7 @@ body._lock {
   bottom: 0;
   left: 6rem;
   width: 77rem;
-  height: 64.7rem;
+  height: 44.7rem;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -2797,7 +2798,7 @@ body._lock {
   position: absolute;
   right: 22rem;
   top: 20rem;
-  width: 32.5rem;
+  width: 26.5rem;
   height: 35.1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -4005,11 +4006,11 @@ body._lock {
 }
 @media (max-width: 450px) {
   .book__offer-desc {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    letter-spacing: 0.392rem;
+    padding-left: 0;
+    padding-right: 0;
+    letter-spacing: 0.25rem;
   }
 }
 

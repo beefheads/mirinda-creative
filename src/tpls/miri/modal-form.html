@@ -10,10 +10,10 @@
 		<form action="mail.php" class="js_form form">
 			<input type="hidden" name="form" value="@@id">
 			<fieldset class="form__fields">
-				@@include("../input/name.html", {label: true})
-				@@include("../input/calendar.html", {label: true,})
-				@@include("../input/tel.html", {label: true})
-				@@include("../input/email.html", {label: true})
+				@@include("../input/name.html", {label: true, placeholder: "Обязательно к заполнению"})
+				@@include("../input/calendar.html", {label: true, placeholder: "Обязательно к заполнению"})
+				@@include("../input/tel.html", {label: true, placeholder: "Обязательно к заполнению"})
+				@@include("../input/email.html", {label: true, placeholder: "Обязательно к заполнению"})
 			</fieldset>
 			<button class="button-second form__button-submit">Отправить</button>
 		</form>

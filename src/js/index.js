@@ -23,17 +23,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		}
 		bayan.addEventListener('bayan-open', () => {
 			section.classList.remove('section--closed');
-			sectionBayans.forEach(bayan => {
-				bayan.closest('.section').classList.remove('section--closed');
-				bayan.classList.add('bayan--opened')
-			})
+
+			// sectionBayans.forEach(bayan => {
+			// 	bayan.closest('.section').classList.remove('section--closed');
+			// 	bayan.classList.add('bayan--opened')
+			// })
+
 			setTimeout(() => {
 	      window.scroll({
 	        top: section.getBoundingClientRect().top + pageYOffset,
 	        left: 0,
 	        behavior: 'smooth'
 	      })
-			}, 300);
+			}, 400);
 		})
 		bayan.addEventListener('bayan-close', () => {
 			section.classList.add('section--closed');
