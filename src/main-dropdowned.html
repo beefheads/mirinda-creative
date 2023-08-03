@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page-home page-main-dropdowned">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMJTNQK8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div class="wrapper">
       @@include('tpls/miri/header.html',{})
 
@@ -164,52 +170,8 @@
                 <span class="section-title__arrow"></span>
                 О чем будем говорить?
               </h2>
-              <div class="programm__list">
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    14.15-14.50
-                  </p>
-                  <p class="programm__line-desc">
-                    Лиза Ходаренок расскажет, как сохранять work-life balance и как контент может стать стилем жизни. 
-                  </p>
-                </div>
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    14.55-15.30
-                  </p>
-                  <p class="programm__line-desc">Маша Чигур поделится секретом, как чувствовать себя раскрепощенно перед камерой и помочь другим раскрыться на площадке.</p>
-                </div>
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    15.35-16.10
-                  </p>
-                  <p class="programm__line-desc">Влад Киреев, скорее всего, заставит вас завидовать, ведь он расскажет как уйти на фриланс и работать из самых красивых точек планеты.</p>
-                </div>
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    16.15-16.45
-                  </p>
-                  <p class="programm__line-desc">Савва расскажет как стать КЕМ-ТО в SMM, когда у тебя нет опыта, но есть желание!</p>
-                </div>
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    17.25-18.00
-                  </p>
-                  <p class="programm__line-desc">Олег Атякшев замотивирует вас заняться саморазвитием и расскажет, как работает профессиональный продакшн.</p>
-                </div>
-                <div class="programm__line">
-                  <p class="programm__line-time">
-                    <span class="decor-ui programm__line-decor-ui"></span>
-                    18.05-18.40
-                  </p>
-                  <p class="programm__line-desc">Настя Самойлович поделится своим взглядом на поиск цели и пути в креативных индустриях.</p>
-                </div>
-              </div>
+
+              @@include('tpls/miri/programm-list.html', {})
             </div>
             <div class="programm__blob-right-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
             <div class="programm__decor-right-bottom" style="background-image: url('./img/programm/ball-3.png');"></div>

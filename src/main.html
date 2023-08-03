@@ -9,6 +9,12 @@
       <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page-home">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMJTNQK8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="wrapper">
       @@include('tpls/miri/header.html',{})
 
@@ -160,68 +166,7 @@
               <span class="section-title__arrow"></span>
               О чем будем говорить?
             </h2>
-            <div class="programm__list">
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  13.00-13.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Лиза Ходаренок</span>
-                  “Как развитие своего блога, делает ее еще более ценным кадром для компании”
-                </p>
-              </div>
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  14.00-14.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Олег Атякшев</span>
-                  “О продюсирование рекламы и клипов с большими бюджетами, как работает профессиональный продакшн, из кого состоит команда и как он сам в нее попал”
-                </p>
-              </div>
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  15.00-15.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Влад Киреев </span>
-                  “Как работать из самых красивых точек планеты и заниматься таргетированной рекламой”
-                </p>
-              </div>
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  16.00-16.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Савва Абушкевич</span>
-                  “как зайти в маркетинг с нуля, когда у тебя НЕТ ОПЫТА”
-                </p>
-              </div>
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  17.00-17.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Настя Самойлович</span>
-                  “Про уть от предметного фотографа со своим уникальным стилем, до работы сет-дизайнером”
-                </p>
-              </div>
-              <div class="programm__line">
-                <p class="programm__line-time">
-                  <span class="decor-ui programm__line-decor-ui"></span>
-                  18.00-18.55
-                </p>
-                <p class="programm__line-desc">
-                  <span class="section-text--bold">Мари Чигур</span>
-                  “Как чувствовать себя комфортно перед камерой, как раскрыть свой внутренний мир”
-                </p>
-              </div>
-            </div>
+            @@include('tpls/miri/programm-list.html', {})
             <div class="programm__blob-right-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
             <div class="programm__decor-right-bottom" style="background-image: url('./img/programm/ball-3.png');"></div>
           </div>
