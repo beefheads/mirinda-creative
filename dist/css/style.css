@@ -3210,6 +3210,15 @@ body._lock {
   }
 }
 
+.hero__desc {
+  max-width: 110rem;
+}
+@media (max-width: 601px) {
+  .hero__desc {
+    max-width: 100%;
+  }
+}
+
 .speakers {
   position: relative;
   overflow: hidden;

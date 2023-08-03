@@ -325,3 +325,11 @@
 		letter-spacing: 0.368rem;
 	}
 }
+
+.hero__desc {
+	max-width: 110rem;
+
+	@media (max-width: $mobile-xl) {
+		max-width: 100%;
+	}
+}

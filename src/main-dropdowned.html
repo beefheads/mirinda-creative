@@ -80,80 +80,7 @@
                 <span class="section-title__arrow"></span>
                 А кто спикер?
               </h2>
-              <div class="speakers__shelf">
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/hodarenok.jpg" alt="Лиза Ходаренок" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="https://instagram.com" target="_blank" class="speakers-card__link">Лиза <br> Ходаренок</a>
-                  </h3>
-                  <p class="speakers-card__desc">Head of SMM Mark Formelle</p>
-                </article>
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/atyakshev.jpg" alt="Олег Атякшев" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="#" target="_blank" class="speakers-card__link">Олег <br> Атякшев</a>
-                  </h3>
-                  <p class="speakers-card__desc">продюсер Partizan Production <br> и Gipsy Films</p>
-                </article>
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/kireev.jpg" alt="Влад Киреев" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="#" target="_blank" class="speakers-card__link">Влад <br> Киреев</a>
-                  </h3>
-                  <p class="speakers-card__desc">таргетолог, с жизнью о которой <br> мы все мечтаем</p>
-                </article>
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/abushkevich.jpg" alt="Савва Абушкевич" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="#" target="_blank" class="speakers-card__link">Савва <br> Абушкевич</a>
-                  </h3>
-                  <p class="speakers-card__desc">креатор и организатор самой популярной вечеринки Минска  MONTANA </p>
-                </article>
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/samoilovich.jpg" alt="Настя Самойлович" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="#" target="_blank" class="speakers-card__link">Настя <br> Самойлович</a>
-                  </h3>
-                  <p class="speakers-card__desc">сет-стилист и человек-«эстетика»</p>
-                </article>
-                <article class="speakers-card">
-                  <div class="decor-ui speakers-card__decor-ui"></div>
-                  <div class="speakers-card__media">
-                    <picture class="speakers-card__media-pic">
-                      <img src="./img/speaker/chigur.jpg" alt="Мари Чигур" class="speakers-card__media-img">
-                    </picture>
-                  </div>
-                  <h3 class="speakers-card__title">
-                    <a href="#" target="_blank" class="speakers-card__link">Мари <br> Чигур</a>
-                  </h3>
-                  <p class="speakers-card__desc">блогер, эксперт в раскрытии себя, автор курса MIMICO, продюсер на масштабных съемках</p>
-                </article>
-              </div>
+              @@include('tpls/miri/speakers-shelf.html', {})
             </div>
             <div class="speakers__decor-right" style="background-image: url('./img/speaker/emoji-1.png');"></div>
             <div class="speakers__blob-right-bottom" style="background-image: url('./img/hero/drops-1.png');"></div>
@@ -192,7 +119,7 @@
                   После прохождения теории на MCD предлагаем сразу перейти к практике!
                 </p>
                 <p class="offer__slogan section-text--stroked">
-                  <span class="offer__slogan-text"> ЛОВИ ШАНС ВЫИГРАТЬ ГРАНТ <br> НА ONLINE ОБУЧЕНИЕ!</span>
+                  <span class="offer__slogan-text"> ЛОВИ ШАНС ВЫИГРАТЬ ГРАНТ <br> НА ONLINE ОБУЧЕНИЕ В КРЕАТИВНОЙ ШКОЛЕ!</span>
                 </p>
                 <ul class="offer__list">
                   <li class="offer__step">
@@ -201,11 +128,12 @@
                   </li>
                   <li class="offer__step">
                     <span class="section-text--color">Публикуйте</span>
-                     в IG и тегайте бренд, покажите, что вы лучше всех <br> и выиграйте грант на online обучение!
+                     и отмечайте Instagram <a href="https://www.instagram.com/mirinda_belarus/" target="_blank" class="section-text--select">@mirinda_belarus</a>, покажите, что вы лучше всех <br> и выиграйте грант на online обучение!
                   </li>
                   <li class="offer__step">
                     Длительность конкурса 2 недели! Победителей объявим в инстаграме <a href="https://www.instagram.com/mirinda_belarus/" target="_blank" class="section-text--select">@mirinda_belarus</a>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -285,7 +213,7 @@
                   </div>
                   <div class="faq-card__answer">
                     <p class="faq-card__answer-text">
-                      Лекции будут проходить с 13.00 до 21.00 с перерывами, <br>
+                      Лекции будут проходить с 14.00 до 19.00 с перерывами, <br>
                       смотрите <a href="#programm" class="section-text--underlined">программу</a>
                     </p>
                   </div>
